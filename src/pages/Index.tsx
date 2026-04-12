@@ -4,6 +4,7 @@ import QuickServices from "@/components/QuickServices";
 import AboutSection from "@/components/AboutSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import SpecialtiesSection from "@/components/SpecialtiesSection";
+import PricingSection from "@/components/PricingSection";
 import HowItWorks from "@/components/HowItWorks";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import ContactSection from "@/components/ContactSection";
@@ -18,6 +19,7 @@ const Index = () => (
     <AboutSection />
     <ServicesGrid />
     <SpecialtiesSection />
+    <PricingSection />
     <HowItWorks />
     <EmergencyBanner />
     <ContactSection />
