@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import QuickServices from "@/components/QuickServices";
 import AboutSection from "@/components/AboutSection";
 import ServicesGrid from "@/components/ServicesGrid";
+import SpecialtiesSection from "@/components/SpecialtiesSection";
 import HowItWorks from "@/components/HowItWorks";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import ContactSection from "@/components/ContactSection";
@@ -16,6 +17,7 @@ const Index = () => (
     <QuickServices />
     <AboutSection />
     <ServicesGrid />
+    <SpecialtiesSection />
     <HowItWorks />
     <EmergencyBanner />
     <ContactSection />
