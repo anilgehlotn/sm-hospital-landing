@@ -1,215 +1,621 @@
-import { ArrowRight, Phone } from "lucide-react";
+// import { ArrowRight, Phone } from "lucide-react";
+
+// interface Doctor {
+//   id: number;
+//   initials: string;
+//   role: string;
+//   name: string;
+//   qualification: string;
+//   department: string;
+//   phone?: string;
+// }
+
+// const TeamSection = () => {
+//   const doctors: Doctor[] = [
+//     {
+//       id: 1,
+//       initials: "MT",
+//       role: "Lead Specialist",
+//       name: "Dr. Mamatha T S",
+//       qualification: "MBBS, MS (OBG)",
+//       department: "OBG & Maternity",
+//       phone: "+91 97311 07743",
+//     },
+//     {
+//       id: 2,
+//       initials: "GP",
+//       role: "General Physician",
+//       name: "Dr. (Name TBA)",
+//       qualification: "MBBS, MD",
+//       department: "General Medicine",
+//     },
+//     {
+//       id: 3,
+//       initials: "SS",
+//       role: "Surgical Specialist",
+//       name: "Dr. (Name TBA)",
+//       qualification: "MBBS, MS (Surgery)",
+//       department: "General Surgery",
+//     },
+//     {
+//       id: 4,
+//       initials: "PC",
+//       role: "Paediatric Consultant",
+//       name: "Dr. (Name TBA)",
+//       qualification: "MBBS, DCH, MD",
+//       department: "Pediatrics",
+//     },
+//   ];
+
+//   return (
+//     <section
+//       className="w-full py-20 px-4 md:px-8"
+//       style={{
+//         background: "linear-gradient(to bottom right, #f8fffe, #f0f7f4)",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto">
+//         {/* Section Header - Left Aligned */}
+//         <div className="mb-12">
+//           {/* Pill Label */}
+//           <div
+//             className="inline-block text-xs tracking-widest font-medium rounded-full px-4 py-1 mb-4"
+//             style={{
+//               backgroundColor: "rgba(44, 170, 96, 0.1)",
+//               color: "#2caa60",
+//             }}
+//           >
+//             OUR TEAM
+//           </div>
+
+//           {/* Heading */}
+//           <h2
+//             className="text-3xl md:text-4xl font-semibold mb-2"
+//             style={{ color: "#1a2e2a" }}
+//           >
+//             Meet Our Specialist Doctors
+//           </h2>
+
+//           {/* Subtitle */}
+//           <p
+//             className="text-sm"
+//             style={{ color: "#4a5e58" }}
+//           >
+//             Experienced doctors committed to your care and recovery
+//           </p>
+//         </div>
+
+//         {/* Doctors Grid */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+//           {doctors.map((doctor) => (
+//             <div
+//               key={doctor.id}
+//               className="rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#2caa60]/30 overflow-hidden"
+//             >
+//               {/* Top Gradient Strip */}
+//               <div
+//                 className="h-24 relative rounded-t-2xl"
+//                 style={{
+//                   background: "linear-gradient(to right, rgba(44, 170, 96, 0.1), rgba(8, 112, 163, 0.1))",
+//                 }}
+//               >
+//                 {/* Avatar */}
+//                 <div
+//                   className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center text-white text-lg font-semibold ring-4 ring-white transition-all duration-300 hover:ring-[#2caa60]/20"
+//                   style={{
+//                     background: "linear-gradient(135deg, #2caa60, #0870a3)",
+//                   }}
+//                 >
+//                   {doctor.initials}
+//                 </div>
+//               </div>
+
+//               {/* Card Body */}
+//               <div className="pt-10 px-5 pb-5 text-center">
+//                 {/* Role Label */}
+//                 <p
+//                   className="text-[10px] uppercase tracking-widest font-medium"
+//                   style={{ color: "#0870a3" }}
+//                 >
+//                   {doctor.role}
+//                 </p>
+
+//                 {/* Doctor Name */}
+//                 <h3
+//                   className="text-base font-semibold mt-0.5"
+//                   style={{ color: "#1a2e2a" }}
+//                 >
+//                   {doctor.name}
+//                 </h3>
+
+//                 {/* Qualification */}
+//                 <p
+//                   className="text-xs mt-0.5"
+//                   style={{ color: "#4a5e58" }}
+//                 >
+//                   {doctor.qualification}
+//                 </p>
+
+//                 {/* Department Pill */}
+//                 <div
+//                   className="mt-3 inline-block text-xs font-medium rounded-full px-3 py-0.5 border"
+//                   style={{
+//                     backgroundColor: "rgba(44, 170, 96, 0.08)",
+//                     color: "#2caa60",
+//                     borderColor: "rgba(44, 170, 96, 0.2)",
+//                   }}
+//                 >
+//                   {doctor.department}
+//                 </div>
+
+//                 {/* Divider */}
+//                 <div
+//                   className="border-t mt-4 mx-4"
+//                   style={{ borderColor: "rgb(243, 244, 246)" }}
+//                 ></div>
+
+//                 {/* Bottom Section */}
+//                 <div className="py-3 px-5 flex items-center justify-between">
+//                   {/* Phone or Consultation Text */}
+//                   <div className="flex items-center gap-1">
+//                     {doctor.phone ? (
+//                       <>
+//                         <Phone size={12} style={{ color: "#4a5e58" }} />
+//                         <span
+//                           className="text-xs"
+//                           style={{ color: "#4a5e58" }}
+//                         >
+//                           {doctor.phone}
+//                         </span>
+//                       </>
+//                     ) : (
+//                       <span
+//                         className="text-xs"
+//                         style={{ color: "#4a5e58" }}
+//                       >
+//                         Available for Consultation
+//                       </span>
+//                     )}
+//                   </div>
+
+//                   {/* Book Button */}
+//                   <button
+//                     className="text-xs font-medium flex items-center gap-1 transition-colors duration-200 hover:text-[#2caa60]"
+//                     style={{ color: "#0870a3" }}
+//                   >
+//                     <span>Book</span>
+//                     <ArrowRight size={12} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Bottom CTA */}
+//         <div className="text-center">
+//           <p
+//             className="text-sm mb-2"
+//             style={{ color: "#4a5e58" }}
+//           >
+//             Want to consult a specific doctor?
+//           </p>
+//           <a
+//             href="#"
+//             className="text-sm font-medium underline-offset-4 hover:underline transition-all duration-200"
+//             style={{ color: "#2caa60" }}
+//           >
+//             View Full Team →
+//           </a>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default TeamSection;
+import { useState } from "react";
+import { ArrowUpRight, Star, Phone, MessageCircle } from "lucide-react";
 
 interface Doctor {
   id: number;
-  initials: string;
-  role: string;
   name: string;
+  role: string;
   qualification: string;
   department: string;
+  rating: number;
+  reviews: number;
+  experience: string;
   phone?: string;
+  available: boolean;
+  gradient: string;
+  initials: string;
 }
 
-const TeamSection = () => {
-  const doctors: Doctor[] = [
-    {
-      id: 1,
-      initials: "MT",
-      role: "Lead Specialist",
-      name: "Dr. Mamatha T S",
-      qualification: "MBBS, MS (OBG)",
-      department: "OBG & Maternity",
-      phone: "+91 97311 07743",
-    },
-    {
-      id: 2,
-      initials: "GP",
-      role: "General Physician",
-      name: "Dr. (Name TBA)",
-      qualification: "MBBS, MD",
-      department: "General Medicine",
-    },
-    {
-      id: 3,
-      initials: "SS",
-      role: "Surgical Specialist",
-      name: "Dr. (Name TBA)",
-      qualification: "MBBS, MS (Surgery)",
-      department: "General Surgery",
-    },
-    {
-      id: 4,
-      initials: "PC",
-      role: "Paediatric Consultant",
-      name: "Dr. (Name TBA)",
-      qualification: "MBBS, DCH, MD",
-      department: "Pediatrics",
-    },
-  ];
+const doctors: Doctor[] = [
+  {
+    id: 1,
+    name: "Dr. Mamatha T S",
+    role: "Lead Specialist",
+    qualification: "MBBS, MS (OBG)",
+    department: "OBG & Maternity",
+    rating: 4.9,
+    reviews: 312,
+    experience: "14 yrs",
+    phone: "+91 97311 07743",
+    available: true,
+    gradient: "linear-gradient(135deg, #1a6b3f 0%, #2caa60 100%)",
+    initials: "MT",
+  },
+  {
+    id: 2,
+    name: "Dr. Rajesh Kumar",
+    role: "General Physician",
+    qualification: "MBBS, MD",
+    department: "General Medicine",
+    rating: 4.8,
+    reviews: 278,
+    experience: "11 yrs",
+    available: true,
+    gradient: "linear-gradient(135deg, #0a4f7a 0%, #0870a3 100%)",
+    initials: "RK",
+  },
+  {
+    id: 3,
+    name: "Dr. Arjun Reddy",
+    role: "Surgical Specialist",
+    qualification: "MBBS, MS (Surgery)",
+    department: "General Surgery",
+    rating: 4.7,
+    reviews: 194,
+    experience: "9 yrs",
+    available: false,
+    gradient: "linear-gradient(135deg, #6b3a1a 0%, #c06a2a 100%)",
+    initials: "AR",
+  },
+  {
+    id: 4,
+    name: "Dr. Priya Sharma",
+    role: "Paediatric Consultant",
+    qualification: "MBBS, DCH, MD",
+    department: "Pediatrics",
+    rating: 4.9,
+    reviews: 401,
+    experience: "12 yrs",
+    available: true,
+    gradient: "linear-gradient(135deg, #5a1a6b 0%, #9b3ec0 100%)",
+    initials: "PS",
+  },
+];
+
+const StarRating = ({ rating }: { rating: number }) => (
+  <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+    <Star
+      size={13}
+      fill="#f59e0b"
+      stroke="none"
+    />
+    <span style={{ fontSize: "13px", fontWeight: 600, color: "#1a2e2a", fontFamily: "'DM Sans', sans-serif" }}>
+      {rating}
+    </span>
+  </div>
+);
+
+const DoctorCard = ({ doctor }: { doctor: Doctor }) => {
+  const [hovered, setHovered] = useState(false);
 
   return (
-    <section
-      className="w-full py-20 px-4 md:px-8"
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
       style={{
-        background: "linear-gradient(to bottom right, #f8fffe, #f0f7f4)",
+        background: "#ffffff",
+        borderRadius: "20px",
+        overflow: "hidden",
+        boxShadow: hovered
+          ? "0 24px 60px rgba(0,0,0,0.13), 0 4px 16px rgba(44,170,96,0.10)"
+          : "0 4px 24px rgba(0,0,0,0.07)",
+        transform: hovered ? "translateY(-6px)" : "translateY(0)",
+        transition: "all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)",
+        border: "1px solid rgba(0,0,0,0.06)",
+        cursor: "pointer",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header - Left Aligned */}
-        <div className="mb-12">
-          {/* Pill Label */}
+      {/* Photo area */}
+      <div
+        style={{
+          position: "relative",
+          height: "220px",
+          background: "#f2f6f4",
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "flex-end",
+          justifyContent: "center",
+        }}
+      >
+        {/* Subtle gradient bg */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(160deg, #eaf7f0 0%, #ddeef9 100%)",
+          }}
+        />
+
+        {/* Avatar placeholder with initials */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+            width: "140px",
+            height: "175px",
+            borderRadius: "70px 70px 0 0",
+            background: doctor.gradient,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "42px",
+            fontWeight: 700,
+            color: "rgba(255,255,255,0.92)",
+            fontFamily: "'Playfair Display', serif",
+            letterSpacing: "-1px",
+            boxShadow: "0 -8px 32px rgba(0,0,0,0.12)",
+          }}
+        >
+          {doctor.initials}
+        </div>
+
+        {/* Availability badge */}
+        <div
+          style={{
+            position: "absolute",
+            top: "14px",
+            right: "14px",
+            display: "flex",
+            alignItems: "center",
+            gap: "5px",
+            background: doctor.available ? "rgba(255,255,255,0.92)" : "rgba(255,255,255,0.80)",
+            borderRadius: "30px",
+            padding: "4px 10px 4px 7px",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+          }}
+        >
           <div
-            className="inline-block text-xs tracking-widest font-medium rounded-full px-4 py-1 mb-4"
             style={{
-              backgroundColor: "rgba(44, 170, 96, 0.1)",
-              color: "#2caa60",
+              width: "7px",
+              height: "7px",
+              borderRadius: "50%",
+              background: doctor.available ? "#2caa60" : "#f87171",
+              boxShadow: doctor.available ? "0 0 0 2px rgba(44,170,96,0.2)" : "0 0 0 2px rgba(248,113,113,0.2)",
             }}
-          >
-            OUR TEAM
-          </div>
-
-          {/* Heading */}
-          <h2
-            className="text-3xl md:text-4xl font-semibold mb-2"
-            style={{ color: "#1a2e2a" }}
-          >
-            Meet Our Specialist Doctors
-          </h2>
-
-          {/* Subtitle */}
-          <p
-            className="text-sm"
-            style={{ color: "#4a5e58" }}
-          >
-            Experienced doctors committed to your care and recovery
-          </p>
+          />
+          <span style={{ fontSize: "10px", fontWeight: 600, color: "#1a2e2a", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.3px" }}>
+            {doctor.available ? "Available" : "Unavailable"}
+          </span>
         </div>
 
-        {/* Doctors Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
-          {doctors.map((doctor) => (
-            <div
-              key={doctor.id}
-              className="rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#2caa60]/30 overflow-hidden"
-            >
-              {/* Top Gradient Strip */}
-              <div
-                className="h-24 relative rounded-t-2xl"
-                style={{
-                  background: "linear-gradient(to right, rgba(44, 170, 96, 0.1), rgba(8, 112, 163, 0.1))",
-                }}
-              >
-                {/* Avatar */}
-                <div
-                  className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center text-white text-lg font-semibold ring-4 ring-white transition-all duration-300 hover:ring-[#2caa60]/20"
-                  style={{
-                    background: "linear-gradient(135deg, #2caa60, #0870a3)",
-                  }}
-                >
-                  {doctor.initials}
-                </div>
-              </div>
-
-              {/* Card Body */}
-              <div className="pt-10 px-5 pb-5 text-center">
-                {/* Role Label */}
-                <p
-                  className="text-[10px] uppercase tracking-widest font-medium"
-                  style={{ color: "#0870a3" }}
-                >
-                  {doctor.role}
-                </p>
-
-                {/* Doctor Name */}
-                <h3
-                  className="text-base font-semibold mt-0.5"
-                  style={{ color: "#1a2e2a" }}
-                >
-                  {doctor.name}
-                </h3>
-
-                {/* Qualification */}
-                <p
-                  className="text-xs mt-0.5"
-                  style={{ color: "#4a5e58" }}
-                >
-                  {doctor.qualification}
-                </p>
-
-                {/* Department Pill */}
-                <div
-                  className="mt-3 inline-block text-xs font-medium rounded-full px-3 py-0.5 border"
-                  style={{
-                    backgroundColor: "rgba(44, 170, 96, 0.08)",
-                    color: "#2caa60",
-                    borderColor: "rgba(44, 170, 96, 0.2)",
-                  }}
-                >
-                  {doctor.department}
-                </div>
-
-                {/* Divider */}
-                <div
-                  className="border-t mt-4 mx-4"
-                  style={{ borderColor: "rgb(243, 244, 246)" }}
-                ></div>
-
-                {/* Bottom Section */}
-                <div className="py-3 px-5 flex items-center justify-between">
-                  {/* Phone or Consultation Text */}
-                  <div className="flex items-center gap-1">
-                    {doctor.phone ? (
-                      <>
-                        <Phone size={12} style={{ color: "#4a5e58" }} />
-                        <span
-                          className="text-xs"
-                          style={{ color: "#4a5e58" }}
-                        >
-                          {doctor.phone}
-                        </span>
-                      </>
-                    ) : (
-                      <span
-                        className="text-xs"
-                        style={{ color: "#4a5e58" }}
-                      >
-                        Available for Consultation
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Book Button */}
-                  <button
-                    className="text-xs font-medium flex items-center gap-1 transition-colors duration-200 hover:text-[#2caa60]"
-                    style={{ color: "#0870a3" }}
-                  >
-                    <span>Book</span>
-                    <ArrowRight size={12} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <p
-            className="text-sm mb-2"
-            style={{ color: "#4a5e58" }}
-          >
-            Want to consult a specific doctor?
-          </p>
-          <a
-            href="#"
-            className="text-sm font-medium underline-offset-4 hover:underline transition-all duration-200"
-            style={{ color: "#2caa60" }}
-          >
-            View Full Team →
-          </a>
+        {/* Experience chip */}
+        <div
+          style={{
+            position: "absolute",
+            top: "14px",
+            left: "14px",
+            background: "rgba(255,255,255,0.92)",
+            borderRadius: "30px",
+            padding: "4px 10px",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+          }}
+        >
+          <span style={{ fontSize: "10px", fontWeight: 700, color: "#0870a3", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.3px" }}>
+            {doctor.experience} exp
+          </span>
         </div>
       </div>
-    </section>
+
+      {/* Card body */}
+      <div style={{ padding: "18px 20px 0 20px", flex: 1 }}>
+        {/* Department pill */}
+        <div
+          style={{
+            display: "inline-block",
+            background: "rgba(44,170,96,0.08)",
+            border: "1px solid rgba(44,170,96,0.18)",
+            borderRadius: "30px",
+            padding: "3px 10px",
+            marginBottom: "8px",
+          }}
+        >
+          <span style={{ fontSize: "10px", fontWeight: 600, color: "#1a8c4e", letterSpacing: "0.5px", fontFamily: "'DM Sans', sans-serif", textTransform: "uppercase" }}>
+            {doctor.department}
+          </span>
+        </div>
+
+        {/* Name */}
+        <h3
+          style={{
+            fontSize: "17px",
+            fontWeight: 700,
+            color: "#0d1f1b",
+            margin: "0 0 2px 0",
+            fontFamily: "'Playfair Display', serif",
+            letterSpacing: "-0.3px",
+          }}
+        >
+          {doctor.name}
+        </h3>
+
+        {/* Role + Qualification */}
+        <p style={{ fontSize: "12px", color: "#6b8280", margin: "0 0 10px 0", fontFamily: "'DM Sans', sans-serif" }}>
+          {doctor.role} · {doctor.qualification}
+        </p>
+
+        {/* Rating + reviews */}
+        <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
+          <StarRating rating={doctor.rating} />
+          <span style={{ fontSize: "11px", color: "#8eaaa6", fontFamily: "'DM Sans', sans-serif" }}>
+            ({doctor.reviews} reviews)
+          </span>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ height: "1px", background: "rgba(0,0,0,0.06)", margin: "0 20px" }} />
+
+      {/* Footer */}
+      <div
+        style={{
+          padding: "14px 20px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        {doctor.phone ? (
+          <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+            <Phone size={12} color="#6b8280" />
+            <span style={{ fontSize: "11px", color: "#6b8280", fontFamily: "'DM Sans', sans-serif" }}>
+              {doctor.phone}
+            </span>
+          </div>
+        ) : (
+          <span style={{ fontSize: "11px", color: "#6b8280", fontFamily: "'DM Sans', sans-serif" }}>
+            Available for Consultation
+          </span>
+        )}
+
+        <button
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "5px",
+            background: hovered ? "#2caa60" : "transparent",
+            border: `1.5px solid ${hovered ? "#2caa60" : "#2caa60"}`,
+            borderRadius: "30px",
+            padding: "5px 12px",
+            cursor: "pointer",
+            transition: "all 0.25s ease",
+          }}
+        >
+          <MessageCircle size={11} color={hovered ? "#fff" : "#2caa60"} />
+          <span
+            style={{
+              fontSize: "11px",
+              fontWeight: 600,
+              color: hovered ? "#fff" : "#2caa60",
+              fontFamily: "'DM Sans', sans-serif",
+              transition: "color 0.25s ease",
+            }}
+          >
+            Book
+          </span>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const TeamSection = () => {
+  return (
+    <>
+      {/* Google Fonts */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+      `}</style>
+
+      <section
+        style={{
+          width: "100%",
+          padding: "80px 24px",
+          background: "linear-gradient(160deg, #f5faf7 0%, #eef5f8 50%, #f5f0fa 100%)",
+          fontFamily: "'DM Sans', sans-serif",
+          boxSizing: "border-box",
+        }}
+      >
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+
+          {/* Header */}
+          <div style={{ textAlign: "center", marginBottom: "56px" }}>
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                background: "rgba(44,170,96,0.1)",
+                border: "1px solid rgba(44,170,96,0.2)",
+                borderRadius: "30px",
+                padding: "5px 14px",
+                marginBottom: "16px",
+              }}
+            >
+              <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#2caa60" }} />
+              <span style={{ fontSize: "11px", fontWeight: 600, color: "#1a8c4e", letterSpacing: "1.5px", textTransform: "uppercase" }}>
+                Our Team
+              </span>
+            </div>
+
+            <h2
+              style={{
+                fontSize: "clamp(28px, 4vw, 42px)",
+                fontWeight: 700,
+                color: "#0d1f1b",
+                margin: "0 0 12px 0",
+                fontFamily: "'Playfair Display', serif",
+                letterSpacing: "-0.5px",
+                lineHeight: 1.15,
+              }}
+            >
+              Meet Our Specialist Doctors
+            </h2>
+
+            <p style={{ fontSize: "15px", color: "#5a7870", maxWidth: "420px", margin: "0 auto", lineHeight: 1.6 }}>
+              Experienced doctors committed to your care and recovery, available across specialties
+            </p>
+          </div>
+
+          {/* Grid */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gap: "22px",
+              marginBottom: "48px",
+            }}
+          >
+            {doctors.map((doctor) => (
+              <DoctorCard key={doctor.id} doctor={doctor} />
+            ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <div style={{ textAlign: "center" }}>
+            <p style={{ fontSize: "14px", color: "#6b8280", marginBottom: "10px" }}>
+              Want to consult a specific doctor?
+            </p>
+            <a
+              href="#"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                fontSize: "14px",
+                fontWeight: 600,
+                color: "#2caa60",
+                textDecoration: "none",
+                borderBottom: "1.5px solid rgba(44,170,96,0.35)",
+                paddingBottom: "2px",
+                transition: "border-color 0.2s",
+              }}
+            >
+              View Full Team
+              <ArrowUpRight size={14} />
+            </a>
+          </div>
+
+        </div>
+      </section>
+    </>
   );
 };
 
