@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import SpecialtiesSection from "@/components/SpecialtiesSection";
 import PricingSection from "@/components/PricingSection";
+import TeamSection from "@/components/TeamSection";
 import HowItWorks from "@/components/HowItWorks";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import ContactSection from "@/components/ContactSection";
@@ -20,6 +21,7 @@ const Index = () => (
     <ServicesGrid />
     <SpecialtiesSection />
     <PricingSection />
+    <TeamSection />
     <HowItWorks />
     <EmergencyBanner />
     <ContactSection />
