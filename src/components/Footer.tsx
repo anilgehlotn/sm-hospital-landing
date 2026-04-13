@@ -150,9 +150,16 @@ const Footer = () => (
 
       {/* Brand */}
       <div>
-        <p style={{ fontSize: 20, fontWeight: 800, color: "#fff", marginBottom: 12 }}>
-          SM <span style={{ color: "#3bcc7a" }}>Hospital</span>
-        </p>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
+          <img 
+            src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776076608/Screenshot_2026-04-13_at_4.06.42_PM_be52kc.png"
+            alt="SM Hospital Logo"
+            style={{ height: 40, width: "auto" }}
+          />
+          <p style={{ fontSize: 18, fontWeight: 800, color: "#fff", margin: 0 }}>
+            SM <span style={{ color: "#3bcc7a" }}>Hospital</span>
+          </p>
+        </div>
         <p style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", lineHeight: 1.75 }}>
           Your trusted healthcare partner providing accessible, affordable and quality care for everyone in Nayandahalli, Bengaluru.
         </p>
