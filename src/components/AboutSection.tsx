@@ -227,7 +227,7 @@ const AboutSection = () => (
             </svg>
           </div>
           <div>
-            <p style={{ fontSize: 14, fontWeight: 800, color: "#0d2d3a", margin: 0 }}>NABH Accredited</p>
+            <p style={{ fontSize: 14, fontWeight: 800, color: "#0d2d3a", margin: 0 }}>NABH Certified</p>
             <p style={{ fontSize: 11, color: "#7a9aaa", margin: "2px 0 0" }}>Trusted quality care</p>
           </div>
         </div>

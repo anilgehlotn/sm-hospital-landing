@@ -162,18 +162,17 @@ import {
 import { useState } from "react";
 
 const specialties = [
-  { id: 1, name: "Cardiology", description: "Heart health, ECG & cardiac care", icon: Heart, color: "#e05a5a", bg: "#fff1f1", stat: "2,400+", statLabel: "Patients treated" },
-  { id: 2, name: "Neurology", description: "Brain, spine & nervous system", icon: Brain, color: "#7c6fcd", bg: "#f3f1ff", stat: "98%", statLabel: "Success rate" },
-  { id: 3, name: "Orthopedics", description: "Joints, fractures & sports injuries", icon: Bone, color: "#0870a3", bg: "#e6f2fa", stat: "1,800+", statLabel: "Surgeries done" },
-  { id: 4, name: "Pediatrics", description: "Child health & vaccinations", icon: Baby, color: "#d4711e", bg: "#fff5ee", stat: "3,200+", statLabel: "Children cared" },
-  { id: 5, name: "OBG & Maternity", description: "Obstetrics, delivery & gynecology", icon: Stethoscope, color: "#2caa60", bg: "#e9faf1", stat: "1,500+", statLabel: "Safe deliveries" },
-  { id: 6, name: "General Medicine", description: "Primary care, fever & diabetes", icon: Activity, color: "#1190b0", bg: "#e0f6fb", stat: "Daily", statLabel: "OPD available" },
-  { id: 7, name: "General Surgery", description: "Hernia, appendix & gallbladder", icon: Scissors, color: "#0870a3", bg: "#e6f2fa", stat: "500+", statLabel: "Procedures/yr" },
-  { id: 8, name: "Gastroenterology", description: "Digestive & liver disorders", icon: Utensils, color: "#d4711e", bg: "#fff5ee", stat: "800+", statLabel: "Cases resolved" },
-  { id: 9, name: "Dermatology", description: "Skin, hair & nail treatments", icon: Sparkles, color: "#e05a5a", bg: "#fff1f1", stat: "4.9★", statLabel: "Patient rating" },
-  { id: 10, name: "Urology", description: "Kidney stones & urinary tract", icon: Droplet, color: "#1190b0", bg: "#e0f6fb", stat: "700+", statLabel: "Procedures/yr" },
-  { id: 11, name: "Ophthalmology", description: "Eye care & cataract surgery", icon: Eye, color: "#7c6fcd", bg: "#f3f1ff", stat: "1,200+", statLabel: "Eyes treated" },
-  { id: 12, name: "ENT", description: "Ear, nose & throat disorders", icon: Ear, color: "#2caa60", bg: "#e9faf1", stat: "600+", statLabel: "Procedures/yr" },
+  { id: 2, name: "Neurology", description: "Brain, spine & nervous system", icon: Brain, color: "#7c6fcd", bg: "#f3f1ff", stat: "98%", statLabel: "Success rate", special: false },
+  { id: 3, name: "Orthopedics", description: "Joints, fractures & sports injuries", icon: Bone, color: "#0870a3", bg: "#e6f2fa", stat: "1,800+", statLabel: "Surgeries done", special: false },
+  { id: 4, name: "Pediatrics", description: "Child health & vaccinations", icon: Baby, color: "#d4711e", bg: "#fff5ee", stat: "3,200+", statLabel: "Children cared", special: false },
+  { id: 5, name: "OBG & Maternity", description: "Obstetrics, delivery & gynecology", icon: Stethoscope, color: "#2caa60", bg: "#e9faf1", stat: "1,500+", statLabel: "Safe deliveries", special: false },
+  { id: 6, name: "General Medicine", description: "Primary care, fever & diabetes", icon: Activity, color: "#1190b0", bg: "#e0f6fb", stat: "Daily", statLabel: "OPD available", special: false },
+  { id: 7, name: "General Surgery", description: "Hernia, appendix & gallbladder", icon: Scissors, color: "#0870a3", bg: "#e6f2fa", stat: "500+", statLabel: "Procedures/yr", special: false },
+  { id: 8, name: "Gastroenterology", description: "Digestive & liver disorders", icon: Utensils, color: "#d4711e", bg: "#fff5ee", stat: "800+", statLabel: "Cases resolved", special: false },
+  { id: 9, name: "Dermatology", description: "Skin, hair & nail treatments", icon: Sparkles, color: "#e05a5a", bg: "#fff1f1", stat: "4.9★", statLabel: "Patient rating", special: false },
+  { id: 10, name: "Urology", description: "Kidney stones & urinary tract", icon: Droplet, color: "#1190b0", bg: "#e0f6fb", stat: "700+", statLabel: "Procedures/yr", special: false },
+  { id: 11, name: "Ophthalmology", description: "Eye care & cataract surgery", icon: Eye, color: "#7c6fcd", bg: "#f3f1ff", stat: "1,200+", statLabel: "Eyes treated", special: true },
+  { id: 12, name: "ENT", description: "Ear, nose & throat disorders", icon: Ear, color: "#2caa60", bg: "#e9faf1", stat: "600+", statLabel: "Procedures/yr", special: true },
 ];
 
 export default function SpecialtiesSection() {
@@ -360,6 +359,24 @@ export default function SpecialtiesSection() {
                 <span className="stat-pill" style={{ background: s.bg, color: s.color }}>
                   {s.stat}
                 </span>
+
+                {s.special && (
+                  <span style={{
+                    position: "absolute",
+                    top: 14,
+                    left: 14,
+                    fontSize: "9px",
+                    fontWeight: 800,
+                    padding: "4px 10px",
+                    borderRadius: "100px",
+                    background: "#fff3cd",
+                    color: "#a68800",
+                    letterSpacing: "0.3px",
+                    textTransform: "uppercase"
+                  }}>
+                    Special Appointment
+                  </span>
+                )}
 
                 <div className="icon-wrap" style={{ background: s.bg }}>
                   <Icon size={21} color={s.color} strokeWidth={2} />
