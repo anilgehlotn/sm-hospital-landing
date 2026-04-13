@@ -63,7 +63,6 @@
 
 // export default HeroSection;
 import { Phone, MessageCircle } from "lucide-react";
-import heroDoctor from "@/assets/hero-doctor.png";
 
 const WHATSAPP_NUMBER = "918431193373";
 const WHATSAPP_MSG = encodeURIComponent("Hello, I want to book an appointment at SM Hospital.");
@@ -102,19 +101,8 @@ const HeroSection = () => (
           </div>
         </div>
 
-        {/* DOCTOR IMAGE + NAME CARD */}
-        <div className="relative z-10 flex flex-col items-center gap-4">
-          <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-secondary/20 blur-3xl scale-90" />
-            <img
-              src={heroDoctor}
-              alt="Dr. Mamatha TS, MD — SM Hospital"
-              width={800}
-              height={960}
-              className="relative w-full max-w-md md:max-w-lg drop-shadow-2xl"
-            />
-          </div>
-
+        {/* DOCTOR NAME BADGE */}
+        <div className="relative z-10 flex flex-col items-center justify-center gap-4">
           {/* Doctor name badge */}
           <div
             className="relative z-10 flex items-center gap-3 rounded-2xl px-5 py-3 backdrop-blur-sm"
