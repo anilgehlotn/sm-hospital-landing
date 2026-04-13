@@ -48,39 +48,365 @@
 // );
 
 // export default HowItWorks;
-import { MessageCircle, Building2, Stethoscope, CalendarCheck } from "lucide-react";
+// import { MessageCircle, Building2, Stethoscope, CalendarCheck } from "lucide-react";
+// import consultationImg from "@/assets/doctor-consultation.jpg";
+
+// const steps = [
+//   {
+//     icon: MessageCircle,
+//     num: "01",
+//     title: "Book Appointment",
+//     desc: "Send a message via WhatsApp to schedule your visit at your convenience.",
+//   },
+//   {
+//     icon: Building2,
+//     num: "02",
+//     title: "Visit Hospital",
+//     desc: "Come in for your consultation at our state-of-the-art facility.",
+//   },
+//   {
+//     icon: Stethoscope,
+//     num: "03",
+//     title: "Get Treatment",
+//     desc: "Receive expert medical care tailored to your unique health needs.",
+//   },
+//   {
+//     icon: CalendarCheck,
+//     num: "04",
+//     title: "Follow-Up Care",
+//     desc: "Ongoing support and monitoring throughout your recovery journey.",
+//   },
+// ];
+
+// const HowItWorks = () => (
+//   <section
+//     id="how-it-works"
+//     style={{
+//       backgroundColor: "#ffffff",
+//       padding: "90px 24px",
+//       fontFamily: "'Georgia', serif",
+//     }}
+//   >
+//     <div
+//       style={{
+//         maxWidth: 1100,
+//         margin: "0 auto",
+//         display: "grid",
+//         gridTemplateColumns: "1fr 1fr",
+//         gap: 80,
+//         alignItems: "center",
+//       }}
+//     >
+//       {/* ── LEFT: Arched image + decorations ── */}
+//       <div style={{ position: "relative", padding: "24px 24px 48px 24px" }}>
+
+//         {/* Floating small circle — top left (doctor icon like Image 1) */}
+//         <div
+//           style={{
+//             position: "absolute",
+//             top: 0,
+//             left: 0,
+//             width: 88,
+//             height: 88,
+//             borderRadius: "50%",
+//             overflow: "hidden",
+//             border: "4px solid #ffffff",
+//             boxShadow: "0 4px 20px rgba(0,0,0,0.12)",
+//             zIndex: 2,
+//             backgroundColor: "#e8f4f0",
+//             display: "flex",
+//             alignItems: "center",
+//             justifyContent: "center",
+//           }}
+//         >
+//           <Stethoscope size={36} strokeWidth={1.3} color="#2a8a7a" />
+//         </div>
+
+//         {/* Main image with arch top (rounded top, straight bottom) */}
+//         <div
+//           style={{
+//             borderRadius: "50% 50% 24px 24px / 18% 18% 24px 24px",
+//             overflow: "hidden",
+//             width: "100%",
+//             height: 500,
+//           }}
+//         >
+//           <img
+//             src={consultationImg}
+//             alt="Doctor consultation"
+//             style={{
+//               width: "100%",
+//               height: "100%",
+//               objectFit: "cover",
+//               objectPosition: "top center",
+//               display: "block",
+//             }}
+//           />
+//         </div>
+
+//         {/* Teal oval — bottom right, like Image 1 */}
+//         <svg
+//           viewBox="0 0 300 110"
+//           style={{
+//             position: "absolute",
+//             bottom: 10,
+//             right: -20,
+//             width: 240,
+//             pointerEvents: "none",
+//             zIndex: 3,
+//           }}
+//         >
+//           <ellipse
+//             cx="150"
+//             cy="55"
+//             rx="145"
+//             ry="48"
+//             fill="none"
+//             stroke="#1dbf9a"
+//             strokeWidth="2.5"
+//           />
+//         </svg>
+
+//         {/* Second smaller teal oval — bottom left, like Image 1 */}
+//         <svg
+//           viewBox="0 0 300 110"
+//           style={{
+//             position: "absolute",
+//             bottom: -10,
+//             left: 20,
+//             width: 190,
+//             pointerEvents: "none",
+//             zIndex: 3,
+//             opacity: 0.65,
+//           }}
+//         >
+//           <ellipse
+//             cx="150"
+//             cy="55"
+//             rx="145"
+//             ry="48"
+//             fill="none"
+//             stroke="#1dbf9a"
+//             strokeWidth="2"
+//           />
+//         </svg>
+//       </div>
+
+//       {/* ── RIGHT: Label + heading + steps ── */}
+//       <div>
+//         {/* "· How It Works" label */}
+//         <div
+//           style={{
+//             display: "flex",
+//             alignItems: "center",
+//             gap: 8,
+//             marginBottom: 18,
+//             color: "#778888",
+//             fontSize: "0.88rem",
+//             fontFamily: "sans-serif",
+//             letterSpacing: "0.02em",
+//           }}
+//         >
+//           <span style={{ color: "#1dbf9a", fontSize: "1.2rem", lineHeight: 1 }}>·</span>
+//           How It Works
+//         </div>
+
+//         {/* Bold heading */}
+//         <h2
+//           style={{
+//             fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+//             fontWeight: 800,
+//             color: "#1a2a2a",
+//             lineHeight: 1.2,
+//             marginBottom: 40,
+//             letterSpacing: "-0.4px",
+//           }}
+//         >
+//           Your Journey to Better Health.
+//         </h2>
+
+//         {/* Steps */}
+//         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+//           {steps.map((s) => {
+//             const Icon = s.icon;
+//             return (
+//               <div
+//                 key={s.num}
+//                 style={{
+//                   display: "flex",
+//                   gap: 18,
+//                   alignItems: "flex-start",
+//                 }}
+//               >
+//                 {/* Icon box */}
+//                 <div
+//                   style={{
+//                     flexShrink: 0,
+//                     width: 52,
+//                     height: 52,
+//                     borderRadius: 14,
+//                     backgroundColor: "#e8f4f0",
+//                     display: "flex",
+//                     alignItems: "center",
+//                     justifyContent: "center",
+//                   }}
+//                 >
+//                   <Icon size={24} strokeWidth={1.5} color="#1a8a7a" />
+//                 </div>
+
+//                 {/* Text */}
+//                 <div>
+//                   <span
+//                     style={{
+//                       fontSize: "0.72rem",
+//                       fontWeight: 700,
+//                       color: "#1dbf9a",
+//                       letterSpacing: "0.1em",
+//                       textTransform: "uppercase",
+//                       fontFamily: "sans-serif",
+//                       display: "block",
+//                       marginBottom: 4,
+//                     }}
+//                   >
+//                     STEP {s.num}
+//                   </span>
+//                   <h3
+//                     style={{
+//                       fontSize: "1.05rem",
+//                       fontWeight: 700,
+//                       color: "#1a2a2a",
+//                       marginBottom: 6,
+//                       fontFamily: "sans-serif",
+//                     }}
+//                   >
+//                     {s.title}
+//                   </h3>
+//                   <p
+//                     style={{
+//                       fontSize: "0.9rem",
+//                       color: "#5a6a6a",
+//                       lineHeight: 1.6,
+//                       fontFamily: "sans-serif",
+//                       margin: 0,
+//                     }}
+//                   >
+//                     {s.desc}
+//                   </p>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div>
+
+//         {/* Read more pill button — like Image 1 */}
+//         <button
+//           style={{
+//             marginTop: 40,
+//             display: "inline-flex",
+//             alignItems: "center",
+//             gap: 12,
+//             backgroundColor: "#1a2a2a",
+//             color: "#ffffff",
+//             border: "none",
+//             borderRadius: 999,
+//             padding: "14px 14px 14px 28px",
+//             fontSize: "0.95rem",
+//             fontWeight: 600,
+//             cursor: "pointer",
+//             fontFamily: "sans-serif",
+//             letterSpacing: "0.01em",
+//           }}
+//         >
+//           Learn more
+//           <span
+//             style={{
+//               width: 36,
+//               height: 36,
+//               borderRadius: "50%",
+//               backgroundColor: "#ffffff",
+//               display: "flex",
+//               alignItems: "center",
+//               justifyContent: "center",
+//               color: "#1a2a2a",
+//               fontSize: "1rem",
+//             }}
+//           >
+//             →
+//           </span>
+//         </button>
+//       </div>
+//     </div>
+//   </section>
+// );
+
+// export default HowItWorks;
+
+import { 
+  Building2, 
+  FlaskConical, 
+  HeartPulse, 
+  Baby, 
+  Bed, 
+  Pill, 
+  Scissors, 
+  Bone 
+} from "lucide-react";
 import consultationImg from "@/assets/doctor-consultation.jpg";
 
-const steps = [
-  {
-    icon: MessageCircle,
-    num: "01",
-    title: "Book Appointment",
-    desc: "Send a message via WhatsApp to schedule your visit at your convenience.",
-  },
+const facilities = [
   {
     icon: Building2,
+    num: "01",
+    title: "Modular Operation Theatre",
+    desc: "Well-equipped, modern OT designed for safe and precise surgical procedures.",
+  },
+  {
+    icon: HeartPulse,
     num: "02",
-    title: "Visit Hospital",
-    desc: "Come in for your consultation at our state-of-the-art facility.",
+    title: "24/7 Nursing Care",
+    desc: "Round-the-clock dedicated nursing support for every patient's comfort and recovery.",
   },
   {
-    icon: Stethoscope,
+    icon: Pill,
     num: "03",
-    title: "Get Treatment",
-    desc: "Receive expert medical care tailored to your unique health needs.",
+    title: "In-house Pharmacy",
+    desc: "Convenient on-site pharmacy stocked with all essential medicines and supplies.",
   },
   {
-    icon: CalendarCheck,
+    icon: Bed,
     num: "04",
-    title: "Follow-Up Care",
-    desc: "Ongoing support and monitoring throughout your recovery journey.",
+    title: "Deluxe & Private Rooms",
+    desc: "Comfortable, well-furnished private and deluxe rooms for a restful stay.",
+  },
+  {
+    icon: Baby,
+    num: "05",
+    title: "Maternity & Child Care",
+    desc: "Specialized care for mothers and newborns throughout pregnancy and beyond.",
+  },
+  {
+    icon: Scissors,
+    num: "06",
+    title: "Major & Minor Procedures",
+    desc: "Full range of surgical and clinical procedures performed with expert precision.",
+  },
+  {
+    icon: Bone,
+    num: "07",
+    title: "Orthopedic Surgeries",
+    desc: "All types of orthopedic surgeries handled by experienced specialists.",
+  },
+  {
+    icon: FlaskConical,
+    num: "08",
+    title: "Diagnostic Laboratory",
+    desc: "In-house lab offering accurate, fast diagnostics to support timely treatment.",
   },
 ];
 
-const HowItWorks = () => (
+const Facilities = () => (
   <section
-    id="how-it-works"
+    id="facilities"
     style={{
       backgroundColor: "#ffffff",
       padding: "90px 24px",
@@ -100,7 +426,7 @@ const HowItWorks = () => (
       {/* ── LEFT: Arched image + decorations ── */}
       <div style={{ position: "relative", padding: "24px 24px 48px 24px" }}>
 
-        {/* Floating small circle — top left (doctor icon like Image 1) */}
+        {/* Floating icon circle — top left */}
         <div
           style={{
             position: "absolute",
@@ -119,10 +445,10 @@ const HowItWorks = () => (
             justifyContent: "center",
           }}
         >
-          <Stethoscope size={36} strokeWidth={1.3} color="#2a8a7a" />
+          <Building2 size={36} strokeWidth={1.3} color="#2a8a7a" />
         </div>
 
-        {/* Main image with arch top (rounded top, straight bottom) */}
+        {/* Main image with arch top */}
         <div
           style={{
             borderRadius: "50% 50% 24px 24px / 18% 18% 24px 24px",
@@ -133,7 +459,7 @@ const HowItWorks = () => (
         >
           <img
             src={consultationImg}
-            alt="Doctor consultation"
+            alt="SM Hospital Facilities"
             style={{
               width: "100%",
               height: "100%",
@@ -144,7 +470,7 @@ const HowItWorks = () => (
           />
         </div>
 
-        {/* Teal oval — bottom right, like Image 1 */}
+        {/* Teal oval — bottom right */}
         <svg
           viewBox="0 0 300 110"
           style={{
@@ -156,18 +482,10 @@ const HowItWorks = () => (
             zIndex: 3,
           }}
         >
-          <ellipse
-            cx="150"
-            cy="55"
-            rx="145"
-            ry="48"
-            fill="none"
-            stroke="#1dbf9a"
-            strokeWidth="2.5"
-          />
+          <ellipse cx="150" cy="55" rx="145" ry="48" fill="none" stroke="#1dbf9a" strokeWidth="2.5" />
         </svg>
 
-        {/* Second smaller teal oval — bottom left, like Image 1 */}
+        {/* Second smaller teal oval — bottom left */}
         <svg
           viewBox="0 0 300 110"
           style={{
@@ -180,21 +498,13 @@ const HowItWorks = () => (
             opacity: 0.65,
           }}
         >
-          <ellipse
-            cx="150"
-            cy="55"
-            rx="145"
-            ry="48"
-            fill="none"
-            stroke="#1dbf9a"
-            strokeWidth="2"
-          />
+          <ellipse cx="150" cy="55" rx="145" ry="48" fill="none" stroke="#1dbf9a" strokeWidth="2" />
         </svg>
       </div>
 
-      {/* ── RIGHT: Label + heading + steps ── */}
+      {/* ── RIGHT: Label + heading + facilities ── */}
       <div>
-        {/* "· How It Works" label */}
+        {/* "· Facilities" label */}
         <div
           style={{
             display: "flex",
@@ -208,7 +518,7 @@ const HowItWorks = () => (
           }}
         >
           <span style={{ color: "#1dbf9a", fontSize: "1.2rem", lineHeight: 1 }}>·</span>
-          How It Works
+          Facilities
         </div>
 
         {/* Bold heading */}
@@ -222,19 +532,25 @@ const HowItWorks = () => (
             letterSpacing: "-0.4px",
           }}
         >
-          Your Journey to Better Health.
+          Modern Infrastructure for Better Care.
         </h2>
 
-        {/* Steps */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-          {steps.map((s) => {
-            const Icon = s.icon;
+        {/* Facility items — 2 column grid for 8 items */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "20px 24px",
+          }}
+        >
+          {facilities.map((f) => {
+            const Icon = f.icon;
             return (
               <div
-                key={s.num}
+                key={f.num}
                 style={{
                   display: "flex",
-                  gap: 18,
+                  gap: 12,
                   alignItems: "flex-start",
                 }}
               >
@@ -242,55 +558,42 @@ const HowItWorks = () => (
                 <div
                   style={{
                     flexShrink: 0,
-                    width: 52,
-                    height: 52,
-                    borderRadius: 14,
+                    width: 44,
+                    height: 44,
+                    borderRadius: 12,
                     backgroundColor: "#e8f4f0",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                   }}
                 >
-                  <Icon size={24} strokeWidth={1.5} color="#1a8a7a" />
+                  <Icon size={20} strokeWidth={1.5} color="#1a8a7a" />
                 </div>
 
                 {/* Text */}
                 <div>
-                  <span
-                    style={{
-                      fontSize: "0.72rem",
-                      fontWeight: 700,
-                      color: "#1dbf9a",
-                      letterSpacing: "0.1em",
-                      textTransform: "uppercase",
-                      fontFamily: "sans-serif",
-                      display: "block",
-                      marginBottom: 4,
-                    }}
-                  >
-                    STEP {s.num}
-                  </span>
                   <h3
                     style={{
-                      fontSize: "1.05rem",
+                      fontSize: "0.88rem",
                       fontWeight: 700,
                       color: "#1a2a2a",
-                      marginBottom: 6,
+                      marginBottom: 3,
                       fontFamily: "sans-serif",
+                      lineHeight: 1.3,
                     }}
                   >
-                    {s.title}
+                    {f.title}
                   </h3>
                   <p
                     style={{
-                      fontSize: "0.9rem",
+                      fontSize: "0.78rem",
                       color: "#5a6a6a",
-                      lineHeight: 1.6,
+                      lineHeight: 1.5,
                       fontFamily: "sans-serif",
                       margin: 0,
                     }}
                   >
-                    {s.desc}
+                    {f.desc}
                   </p>
                 </div>
               </div>
@@ -298,8 +601,9 @@ const HowItWorks = () => (
           })}
         </div>
 
-        {/* Read more pill button — like Image 1 */}
-        <button
+        {/* CTA pill button */}
+        <a
+          href="#contact"
           style={{
             marginTop: 40,
             display: "inline-flex",
@@ -315,9 +619,10 @@ const HowItWorks = () => (
             cursor: "pointer",
             fontFamily: "sans-serif",
             letterSpacing: "0.01em",
+            textDecoration: "none",
           }}
         >
-          Learn more
+          Book a Visit
           <span
             style={{
               width: 36,
@@ -333,10 +638,10 @@ const HowItWorks = () => (
           >
             →
           </span>
-        </button>
+        </a>
       </div>
     </div>
   </section>
 );
 
-export default HowItWorks;
+export default Facilities;
