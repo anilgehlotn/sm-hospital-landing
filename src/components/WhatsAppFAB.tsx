@@ -8,10 +8,16 @@ const WhatsAppFAB = () => (
     href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
     target="_blank"
     rel="noopener noreferrer"
-    className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-secondary flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
+    className="fixed z-50 rounded-full bg-secondary flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
+    style={{
+      bottom: "clamp(20px, 5vw, 24px)",
+      right: "clamp(20px, 5vw, 24px)",
+      width: "clamp(56px, 12vw, 64px)",
+      height: "clamp(56px, 12vw, 64px)",
+    }}
     aria-label="Chat on WhatsApp"
   >
-    <MessageCircle size={30} className="text-secondary-foreground" />
+    <MessageCircle size={30} className="text-secondary-foreground" style={{ width: "clamp(24px, 5vw, 30px)", height: "clamp(24px, 5vw, 30px)" }} />
   </a>
 );
 

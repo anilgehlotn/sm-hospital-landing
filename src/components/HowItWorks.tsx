@@ -409,22 +409,37 @@ const Facilities = () => (
     id="facilities"
     style={{
       backgroundColor: "#ffffff",
-      padding: "90px 24px",
+      padding: "60px 20px",
       fontFamily: "'Georgia', serif",
     }}
   >
+    <style>{`
+      @media (min-width: 768px) {
+        #facilities > div {
+          grid-template-columns: 1fr 1fr !important;
+          gap: 80px !important;
+          padding: 0 60px !important;
+        }
+      }
+      @media (max-width: 767px) {
+        #facilities > div {
+          gap: 40px !important;
+          padding: 0 24px !important;
+        }
+      }
+    `}</style>
     <div
       style={{
         maxWidth: 1100,
         margin: "0 auto",
         display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: 80,
+        gridTemplateColumns: "1fr",
+        gap: "40px",
         alignItems: "center",
       }}
     >
       {/* ── LEFT: Arched image + decorations ── */}
-      <div style={{ position: "relative", padding: "24px 24px 48px 24px" }}>
+      <div style={{ position: "relative", padding: "clamp(16px, 4vw, 24px) clamp(16px, 4vw, 24px) clamp(24px, 6vw, 48px) clamp(16px, 4vw, 24px)" }}>
 
         {/* Floating icon circle — top left */}
         <div
@@ -432,8 +447,8 @@ const Facilities = () => (
             position: "absolute",
             top: 0,
             left: 0,
-            width: 88,
-            height: 88,
+            width: "clamp(60px, 15vw, 88px)",
+            height: "clamp(60px, 15vw, 88px)",
             borderRadius: "50%",
             overflow: "hidden",
             border: "4px solid #ffffff",
@@ -445,7 +460,7 @@ const Facilities = () => (
             justifyContent: "center",
           }}
         >
-          <Building2 size={36} strokeWidth={1.3} color="#2a8a7a" />
+          <Building2 size="clamp(24, 6vw, 36)" strokeWidth={1.3} color="#2a8a7a" />
         </div>
 
         {/* Main image with arch top */}
@@ -454,7 +469,7 @@ const Facilities = () => (
             borderRadius: "50% 50% 24px 24px / 18% 18% 24px 24px",
             overflow: "hidden",
             width: "100%",
-            height: 500,
+            height: "clamp(300px, 60vw, 500px)",
           }}
         >
           <img
@@ -574,7 +589,7 @@ const Facilities = () => (
                 <div>
                   <h3
                     style={{
-                      fontSize: "0.88rem",
+                      fontSize: "clamp(0.75rem, 2vw, 0.88rem)",
                       fontWeight: 700,
                       color: "#1a2a2a",
                       marginBottom: 3,
@@ -586,7 +601,7 @@ const Facilities = () => (
                   </h3>
                   <p
                     style={{
-                      fontSize: "0.78rem",
+                      fontSize: "clamp(0.7rem, 1.8vw, 0.78rem)",
                       color: "#5a6a6a",
                       lineHeight: 1.5,
                       fontFamily: "sans-serif",

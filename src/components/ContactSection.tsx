@@ -131,7 +131,7 @@ const ContactSection = () => {
       style={{
         fontFamily: "'DM Sans', 'Segoe UI', sans-serif",
         background: "#eef2f6",
-        padding: "72px 24px",
+        padding: "40px 20px",
       }}
     >
       <style>{`
@@ -169,6 +169,24 @@ const ContactSection = () => {
           transition: background 0.18s ease, transform 0.15s ease;
         }
         .contact-submit-btn:hover { background: #065e8a; transform: translateY(-1px); }
+        @media (min-width: 768px) {
+          #contact-card {
+            grid-template-columns: 1fr 1fr !important;
+            min-height: 420px !important;
+          }
+          #contact-image {
+            display: flex !important;
+          }
+        }
+        @media (max-width: 767px) {
+          #contact-card {
+            grid-template-columns: 1fr !important;
+            min-height: auto !important;
+          }
+          #contact-image {
+            display: none !important;
+          }
+        }
       `}</style>
 
       {/* Header */}
@@ -190,7 +208,7 @@ const ContactSection = () => {
           <span style={{ display: "inline-block", width: 22, height: 3, borderRadius: 2, background: "linear-gradient(to right,#0870a3,#3bcc7a)" }} />
         </p>
         <h2 style={{
-          fontSize: "clamp(24px,3.5vw,38px)",
+          fontSize: "clamp(24px, 5vw, 38px)",
           fontWeight: 800,
           color: "#0d2d3a",
           lineHeight: 1.2,
@@ -206,15 +224,14 @@ const ContactSection = () => {
         background: "#c5dbe8",
         borderRadius: 28,
         display: "grid",
-        gridTemplateColumns: "1fr 1fr",
+        gridTemplateColumns: "1fr",
         overflow: "hidden",
-        minHeight: 420,
-      }}>
+      }} id="contact-card">
 
         {/* Left — Form */}
-        <div style={{ padding: "48px 44px", background: "#c5dbe8" }}>
+        <div style={{ padding: "clamp(24px, 5vw, 48px) clamp(20px, 4vw, 44px)", background: "#c5dbe8" }}>
           <h3 style={{
-            fontSize: "clamp(20px,2.5vw,30px)",
+            fontSize: "clamp(18px, 4vw, 30px)",
             fontWeight: 800,
             color: "#0d2d3a",
             lineHeight: 1.25,
@@ -267,11 +284,11 @@ const ContactSection = () => {
         <div style={{
           position: "relative",
           background: "#d6eaf3",
-          display: "flex",
+          display: "none",
           alignItems: "flex-end",
           justifyContent: "center",
           overflow: "hidden",
-        }}>
+        }} id="contact-image">
           {/* Green blob */}
           <div style={{
             position: "absolute",

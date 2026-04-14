@@ -182,7 +182,7 @@ export default function SpecialtiesSection() {
     <section style={{
       fontFamily: "'DM Sans', 'Segoe UI', sans-serif",
       background: "#eef2f6",
-      padding: "72px 20px",
+      padding: "48px 16px sm:60px 20px md:72px",
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
@@ -192,9 +192,9 @@ export default function SpecialtiesSection() {
           grid-template-columns: repeat(4, 1fr);
           gap: 14px;
         }
-        @media (max-width: 1100px) { .spec-grid { grid-template-columns: repeat(3, 1fr); } }
-        @media (max-width: 720px)  { .spec-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 460px)  { .spec-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 1280px) { .spec-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 1024px) { .spec-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+        @media (max-width: 640px)  { .spec-grid { grid-template-columns: 1fr; gap: 10px; } }
 
         .spec-card {
           background: #ffffff;

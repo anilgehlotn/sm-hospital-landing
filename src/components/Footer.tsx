@@ -89,10 +89,10 @@ const Footer = () => (
         padding-bottom: 40px;
       }
       @media (max-width: 900px) {
-        .footer-grid { grid-template-columns: 1fr 1fr; }
+        .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
       }
-      @media (max-width: 520px) {
-        .footer-grid { grid-template-columns: 1fr; }
+      @media (max-width: 640px) {
+        .footer-grid { grid-template-columns: 1fr; gap: 24px; }
       }
       .footer-col-title {
         font-size: 11px;

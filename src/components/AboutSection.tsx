@@ -72,8 +72,11 @@ const AboutSection = () => (
         margin: 0 auto;
       }
       @media (max-width: 860px) {
-        .about-grid { grid-template-columns: 1fr; }
+        .about-grid { grid-template-columns: 1fr; gap: 32px; }
         .photo-stack { display: none; }
+      }
+      @media (max-width: 640px) {
+        .about-grid { gap: 24px; }
       }
 
       .photo-stack {
@@ -173,8 +176,11 @@ const AboutSection = () => (
         text-align: center;
         gap: 20px;
       }
+      @media (max-width: 768px) {
+        .stats-row { margin-top: 40px; padding: 32px 24px; }
+      }
       @media (max-width: 600px) {
-        .stats-row { grid-template-columns: repeat(2, 1fr); }
+        .stats-row { grid-template-columns: repeat(2, 1fr); padding: 24px 16px; }
       }
 
       .stat-divider {

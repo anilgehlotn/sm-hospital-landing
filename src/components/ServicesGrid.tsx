@@ -92,7 +92,7 @@ const ServicesGrid = () => (
     id="services"
     style={{
       backgroundColor: "#f8f9fa",
-      padding: "80px 24px",
+      padding: "60px 20px sm:80px 24px",
       fontFamily: "'Georgia', serif",
     }}
   >
@@ -103,10 +103,10 @@ const ServicesGrid = () => (
       }}
     >
       {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: 56 }}>
+      <div style={{ textAlign: "center", marginBottom: "40px sm:56px" }}>
         <span
           style={{
-            fontSize: "0.75rem",
+            fontSize: "clamp(11px, 2vw, 13px)",
             fontWeight: 700,
             color: "#4a9a7a",
             textTransform: "uppercase",
@@ -117,7 +117,7 @@ const ServicesGrid = () => (
         </span>
         <h2
           style={{
-            fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
+            fontSize: "clamp(24px, 4vw, 44px)",
             fontWeight: 800,
             color: "#1a3a3a",
             marginTop: 12,
@@ -132,7 +132,7 @@ const ServicesGrid = () => (
           style={{
             color: "#5a6a6a",
             marginTop: 14,
-            fontSize: "0.97rem",
+            fontSize: "clamp(14px, 2.5vw, 16px)",
             maxWidth: 480,
             margin: "14px auto 0",
             lineHeight: 1.6,
@@ -146,8 +146,8 @@ const ServicesGrid = () => (
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gap: 20,
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          gap: "16px sm:20px",
         }}
       >
         {services.map((s) => {
@@ -177,46 +177,45 @@ const ServicesGrid = () => (
                   "translateY(0)";
               }}
             >
-              {/* Icon */}
-              <div
-                style={{
-                  width: 52,
-                  height: 52,
-                  borderRadius: 14,
-                  backgroundColor: "rgba(0,0,0,0.08)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: 24,
-                }}
-              >
-                <Icon size={26} strokeWidth={1.4} color="#2a3a3a" />
-              </div>
+              {/* Icon */}            <div
+              style={{
+                width: "48px sm:52px",
+                height: "48px sm:52px",
+                borderRadius: 14,
+                backgroundColor: "rgba(0,0,0,0.08)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "16px sm:24px",
+              }}
+            >
+              <Icon size={22} strokeWidth={1.4} color="#2a3a3a" />
+            </div>
 
-              {/* Title */}
-              <h3
-                style={{
-                  fontSize: "1.15rem",
-                  fontWeight: 700,
-                  color: "#1a3a3a",
-                  marginBottom: 10,
-                  lineHeight: 1.25,
-                }}
-              >
-                {s.title}
-              </h3>
+            {/* Title */}
+            <h3
+              style={{
+                fontSize: "clamp(14px, 2.5vw, 18px)",
+                fontWeight: 700,
+                color: "#1a3a3a",
+                marginBottom: 10,
+                lineHeight: 1.25,
+              }}
+            >
+              {s.title}
+            </h3>
 
-              {/* Description */}
-              <p
-                style={{
-                  fontSize: "0.9rem",
-                  color: "#3a4a4a",
-                  lineHeight: 1.6,
-                  margin: 0,
-                }}
-              >
-                {s.desc}
-              </p>
+            {/* Description */}
+            <p
+              style={{
+                fontSize: "clamp(13px, 2vw, 15px)",
+                color: "#3a4a4a",
+                lineHeight: 1.6,
+                margin: 0,
+              }}
+            >
+              {s.desc}
+            </p>
             </div>
           );
         })}

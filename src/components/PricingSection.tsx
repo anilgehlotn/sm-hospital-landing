@@ -423,7 +423,7 @@ export default function PricingSection() {
     <section
       style={{
         background: "linear-gradient(160deg, #f0f9f6 0%, #e6f4f1 50%, #eaf6fb 100%)",
-        padding: "80px 20px",
+        padding: "60px 20px sm:80px 24px md:80px",
         fontFamily: "'DM Sans', 'Segoe UI', sans-serif",
       }}
     >
@@ -508,9 +508,9 @@ export default function PricingSection() {
       <div style={{ maxWidth: 1160, margin: "0 auto" }}>
 
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: 48 }}>
+        <div style={{ textAlign: "center", marginBottom: "40px md:48px" }}>
           <p style={{
-            fontSize: 11,
+            fontSize: "clamp(10px, 2vw, 11px)",
             fontWeight: 700,
             letterSpacing: "3px",
             color: "#0870a3",
@@ -520,7 +520,7 @@ export default function PricingSection() {
             TRANSPARENT PRICING
           </p>
           <h2 style={{
-            fontSize: "clamp(28px, 4vw, 40px)",
+            fontSize: "clamp(24px, 4vw, 40px)",
             fontWeight: 700,
             color: "#0d2d3a",
             lineHeight: 1.2,
@@ -528,7 +528,7 @@ export default function PricingSection() {
           }}>
             Treatment Packages for Every Family
           </h2>
-          <p style={{ fontSize: 15, color: "#5a7a8a", marginBottom: 20 }}>
+          <p style={{ fontSize: "clamp(13px, 2.5vw, 15px)", color: "#5a7a8a", marginBottom: 20 }}>
             Comprehensive packages designed with your family's wellbeing in mind
           </p>
           <div style={{ display: "flex", justifyContent: "center" }}>
@@ -541,8 +541,10 @@ export default function PricingSection() {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          gap: 10,
-          marginBottom: 44,
+          gap: "8px sm:10px",
+          marginBottom: "36px md:44px",
+          overflowX: "auto",
+          paddingBottom: "8px",
         }}>
           {filters.map((f) => (
             <button
@@ -558,8 +560,8 @@ export default function PricingSection() {
         {/* Cards Grid */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-          gap: 24,
+          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+          gap: "18px sm:20px md:24px",
           marginBottom: 32,
         }}>
           {filtered.map((pkg) => {
