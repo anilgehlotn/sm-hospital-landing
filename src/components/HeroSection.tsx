@@ -68,45 +68,46 @@ const WHATSAPP_NUMBER = "918431193373";
 const WHATSAPP_MSG = encodeURIComponent("Hello, I want to book an appointment at SM Hospital.");
 
 const HeroSection = () => (
-  <section id="home" className="relative bg-primary overflow-hidden">
+  <section id="home" className="relative bg-gradient-to-br from-primary via-blue-800 to-primary overflow-hidden">
     <div className="absolute inset-0 opacity-10">
       <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-secondary" />
       <div className="absolute -top-20 -left-20 w-[300px] h-[300px] rounded-full bg-hero-foreground" />
     </div>
 
-    <div className="container mx-auto px-4 pt-20 pb-16 md:pt-40 md:pb-28 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div className="relative z-10 space-y-4 md:space-y-6">
+    <div className="container mx-auto px-4 pt-24 sm:pt-28 md:pt-40 pb-16 md:pb-28 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+        <div className="relative z-10 space-y-3 sm:space-y-4 md:space-y-6">
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-primary-foreground">
             Expert & Trusted Healthcare, Right at Your Doorstep
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 max-w-lg">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-primary-foreground/80 max-w-lg">
             Accessible, Affordable & Quality Care for Everyone
           </p>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 md:gap-4 pt-2 md:pt-4">
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center sm:justify-start gap-2 rounded-xl bg-secondary px-4 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-bold text-secondary-foreground shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all"
+              className="inline-flex items-center justify-center sm:justify-start gap-2 rounded-lg sm:rounded-xl bg-secondary px-4 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3.5 text-xs sm:text-sm md:text-base font-bold text-secondary-foreground shadow-lg hover:shadow-xl hover:scale-105 transition-all"
             >
-              <MessageCircle size={18} className="sm:w-5 sm:h-5" /> 
+              <MessageCircle size={16} className="sm:w-5 sm:h-5" /> 
               <span>Book on WhatsApp</span>
             </a>
             <a
               href="tel:+918431193373"
-              className="inline-flex items-center justify-center sm:justify-start gap-2 rounded-xl border-2 border-primary-foreground/40 px-4 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-bold text-primary-foreground hover:bg-primary-foreground/10 transition-colors"
+              className="inline-flex items-center justify-center sm:justify-start gap-2 rounded-lg sm:rounded-xl border-2 border-primary-foreground/40 px-4 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3.5 text-xs sm:text-sm md:text-base font-bold text-primary-foreground hover:bg-primary-foreground/10 transition-all"
             >
-              <Phone size={18} className="sm:w-5 sm:h-5" /> Call Now
+              <Phone size={16} className="sm:w-5 sm:h-5" /> 
+              <span>Call Now</span>
             </a>
           </div>
         </div>
 
         {/* DOCTOR NAME BADGE */}
-        <div className="relative z-10 flex flex-col items-center justify-center gap-4 mt-8 md:mt-0">
+        <div className="relative z-10 flex flex-col items-center justify-center gap-3 sm:gap-4 mt-6 md:mt-0">
           {/* Doctor name badge */}
           <div
-            className="relative z-10 flex items-center gap-3 rounded-2xl px-5 py-3 backdrop-blur-sm"
+            className="relative z-10 flex items-center gap-2 sm:gap-3 rounded-lg sm:rounded-2xl px-3 sm:px-5 py-2 sm:py-3 backdrop-blur-sm"
             style={{
               background: "rgba(255,255,255,0.10)",
               border: "1px solid rgba(255,255,255,0.18)",
@@ -115,15 +116,15 @@ const HeroSection = () => (
           >
             {/* Accent bar */}
             <div
-              className="w-1 self-stretch rounded-full"
+              className="w-0.5 sm:w-1 self-stretch rounded-full"
               style={{ background: "linear-gradient(180deg, #40ad4c, #0072ad)" }}
             />
             <div>
-              <p className="text-base font-extrabold text-white leading-tight tracking-tight">
+              <p className="text-xs sm:text-sm md:text-base font-extrabold text-white leading-tight tracking-tight">
                 Dr. Mamatha TS
               </p>
               <p
-                className="text-xs font-semibold uppercase tracking-widest mt-0.5"
+                className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider mt-0.5"
                 style={{ color: "#40ad4c" }}
               >
                 MD &nbsp;·&nbsp; Medical Director
