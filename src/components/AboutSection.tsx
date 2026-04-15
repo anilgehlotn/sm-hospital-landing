@@ -47,7 +47,7 @@ const stats = [
   { value: "15,000", suffix: "+", label: "Patients Treated" },
   { value: "12", suffix: "+", label: "Specialties" },
   { value: "98", suffix: "%", label: "Satisfaction Rate" },
-  { value: "10", suffix: "+", label: "Years of Care" },
+  { value: "5", suffix: "+", label: "Years of Care" },
 ];
 
 const AboutSection = () => (
