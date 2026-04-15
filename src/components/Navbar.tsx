@@ -304,16 +304,16 @@ const Navbar = () => {
             className="h-8 sm:h-10 w-8 sm:w-10 object-cover transition-all duration-500"
             style={!scrolled ? { filter: "brightness(1.12) drop-shadow(0 1px 6px rgba(0,0,0,0.2))" } : {}}
           />
-          <div className="hidden sm:flex flex-col gap-0.5">
-            <div className="text-sm sm:text-base font-extrabold leading-none tracking-tight">
-              <span style={{ color: scrolled ? "#40ad4c" : "#ffffff" }}>SM </span>
-              <span style={{ color: scrolled ? "#0072ad" : "#d0eeff" }}>Hospital</span>
+          <div className="flex flex-col gap-0.5">
+            <div className="text-base sm:text-lg md:text-2xl font-extrabold leading-none tracking-tight">
+              <span style={{ color: scrolled ? "#2caa60" : "#2caa60" }}>SM </span>
+              <span style={{ color: scrolled ? "#1e4ea8" : "#1e4ea8" }}>Hospital</span>
             </div>
             <div
-              className="text-[7px] sm:text-[9px] font-semibold uppercase tracking-[1px] sm:tracking-[2px] transition-colors duration-500"
+              className="text-[7px] sm:text-[10px] font-semibold uppercase tracking-[0.5px] sm:tracking-[2px] transition-colors duration-500"
               style={{ color: scrolled ? "#94a3b8" : "rgba(255,255,255,0.6)" }}
             >
-              Healthcare &amp; Research
+              Proud to Serve
             </div>
           </div>
         </a>
@@ -371,12 +371,12 @@ const Navbar = () => {
                 className="h-8 w-8 object-cover rounded-full"
               />
               <div className="flex flex-col gap-0.5">
-                <div className="text-sm font-extrabold leading-none tracking-tight">
-                  <span style={{ color: "#40ad4c" }}>SM </span>
-                  <span style={{ color: "#0072ad" }}>Hospital</span>
+                <div className="text-lg sm:text-xl md:text-2xl font-extrabold leading-none tracking-tight">
+                  <span style={{ color: "#2caa60" }}>SM </span>
+                  <span style={{ color: "#1e4ea8" }}>Hospital</span>
                 </div>
-                <div className="text-[8px] font-semibold uppercase tracking-[1px] text-slate-400">
-                  Healthcare &amp; Research
+                <div className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[1px] text-slate-400">
+                  Proud to Serve
                 </div>
               </div>
             </div>
