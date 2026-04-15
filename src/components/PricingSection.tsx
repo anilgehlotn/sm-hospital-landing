@@ -307,6 +307,397 @@
 // };
 
 // export default PricingSection;
+// import { useState } from "react";
+// import { Heart, Scissors, Droplet, Brain, Baby, Activity } from "lucide-react";
+
+// const packages = [
+//   {
+//     id: 1,
+//     category: "Maternity",
+//     name: "Normal Delivery",
+//     label: "FOR NEW MOTHERS",
+//     description: "Safe and comfortable natural childbirth with complete delivery package.",
+//     price: "₹35,000",
+//     cta: "Book Your Delivery",
+//     features: [
+//       "Pre-natal consults",
+//       "Delivery room & nursing",
+//       "Post-natal care 2 days",
+//       "Medicines & supplies included",
+//     ],
+//     icon: Baby,
+//   },
+//   {
+//     id: 2,
+//     category: "Maternity",
+//     name: "LSCS / C-Section",
+//     label: "FOR PLANNED BIRTHS",
+//     description: "Surgical cesarean delivery with full anaesthesia and recovery support.",
+//     price: "₹65,000",
+//     cta: "Book Your Delivery",
+//     features: [
+//       "Modular OT setup",
+//       "Anaesthesia included",
+//       "Recovery 3–4 days",
+//       "Medicines & supplies included",
+//     ],
+//     icon: Heart,
+//   },
+//   {
+//     id: 3,
+//     category: "Surgery",
+//     name: "Hernia Surgery",
+//     label: "FOR GENERAL SURGERY",
+//     description: "Advanced laparoscopic hernia repair with minimal downtime.",
+//     price: null,
+//     cta: "Enquire Now",
+//     features: [
+//       "Surgical consult",
+//       "Laparoscopic option",
+//       "2-day hospital stay",
+//       "Post-op follow-up",
+//     ],
+//     icon: Scissors,
+//   },
+//   {
+//     id: 4,
+//     category: "Urology",
+//     name: "Kidney Stone — URSL",
+//     label: "FOR UROLOGICAL CARE",
+//     description: "Precision laser-based kidney stone removal with stenting if needed.",
+//     price: null,
+//     cta: "Enquire Now",
+//     features: [
+//       "Urology consult",
+//       "Laser lithotripsy",
+//       "Stenting if needed",
+//       "Post-procedure care",
+//     ],
+//     icon: Droplet,
+//   },
+//   {
+//     id: 5,
+//     category: "Cardiology",
+//     name: "Hypertension Package",
+//     label: "FOR CARDIAC HEALTH",
+//     description: "Complete cardiac evaluation with 3-month follow-up plan.",
+//     price: null,
+//     cta: "Enquire Now",
+//     features: [
+//       "ECG + 2D Echo",
+//       "Lipid profile & RFT",
+//       "Cardiologist review",
+//       "3-month follow-up",
+//     ],
+//     icon: Activity,
+//   },
+//   {
+//     id: 6,
+//     category: "Neurology",
+//     name: "Neuro Evaluation",
+//     label: "FOR NEUROLOGICAL CARE",
+//     description: "Comprehensive neurological assessment with EEG/MRI referral.",
+//     price: null,
+//     cta: "Enquire Now",
+//     features: [
+//       "Neurologist consult",
+//       "EEG / MRI referral",
+//       "Medication review",
+//       "Follow-up included",
+//     ],
+//     icon: Brain,
+//   },
+// ];
+
+// const filters = ["All", "Maternity", "Surgery", "Urology", "Cardiology", "Neurology"];
+
+// export default function PricingSection() {
+//   const [activeFilter, setActiveFilter] = useState("All");
+
+//   const filtered =
+//     activeFilter === "All"
+//       ? packages
+//       : packages.filter((p) => p.category === activeFilter);
+
+//   return (
+//     <section
+//       style={{
+//         background: "linear-gradient(160deg, #f0f9f6 0%, #e6f4f1 50%, #eaf6fb 100%)",
+//         padding: "60px 20px sm:80px 24px md:80px",
+//         fontFamily: "'DM Sans', 'Segoe UI', sans-serif",
+//       }}
+//     >
+//       {/* Google Font */}
+//       <style>{`
+//         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+//         .pkg-card {
+//           background: #ffffff;
+//           border-radius: 16px;
+//           overflow: hidden;
+//           box-shadow: 0 2px 12px rgba(7, 112, 163, 0.08);
+//           transition: transform 0.22s ease, box-shadow 0.22s ease;
+//           display: flex;
+//           flex-direction: column;
+//         }
+//         .pkg-card:hover {
+//           transform: translateY(-6px);
+//           box-shadow: 0 12px 32px rgba(7, 112, 163, 0.15);
+//         }
+//         .cta-btn {
+//           width: 100%;
+//           padding: 13px 0;
+//           border-radius: 8px;
+//           font-weight: 700;
+//           font-size: 14px;
+//           letter-spacing: 0.3px;
+//           cursor: pointer;
+//           background: #3bcc7a;
+//           color: #fff;
+//           border: none;
+//           transition: background 0.18s ease, transform 0.15s ease;
+//           margin-top: auto;
+//         }
+//         .cta-btn:hover {
+//           background: #2caa60;
+//           transform: scale(1.02);
+//         }
+//         .filter-btn {
+//           padding: 8px 20px;
+//           border-radius: 100px;
+//           font-size: 13px;
+//           font-weight: 600;
+//           cursor: pointer;
+//           border: 1.5px solid transparent;
+//           transition: all 0.18s ease;
+//         }
+//         .filter-btn.active {
+//           background: #0870a3;
+//           color: white;
+//           border-color: #0870a3;
+//         }
+//         .filter-btn.inactive {
+//           background: white;
+//           color: #4a7080;
+//           border-color: #c8dde6;
+//         }
+//         .filter-btn.inactive:hover {
+//           border-color: #0870a3;
+//           color: #0870a3;
+//         }
+//         .feature-item {
+//           display: flex;
+//           align-items: center;
+//           gap: 10px;
+//           font-size: 13px;
+//           color: #4a6070;
+//           padding: 4px 0;
+//         }
+//         .check-icon {
+//           width: 18px;
+//           height: 18px;
+//           border-radius: 50%;
+//           border: 1.5px solid #3bcc7a;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           flex-shrink: 0;
+//         }
+//       `}</style>
+
+//       <div style={{ maxWidth: 1160, margin: "0 auto" }}>
+
+//         {/* Header */}
+//         <div style={{ textAlign: "center", marginBottom: "40px md:48px" }}>
+//           <p style={{
+//             fontSize: "clamp(10px, 2vw, 11px)",
+//             fontWeight: 700,
+//             letterSpacing: "3px",
+//             color: "#0870a3",
+//             textTransform: "uppercase",
+//             marginBottom: 12,
+//           }}>
+//             TRANSPARENT PRICING
+//           </p>
+//           <h2 style={{
+//             fontSize: "clamp(24px, 4vw, 40px)",
+//             fontWeight: 700,
+//             color: "#0d2d3a",
+//             lineHeight: 1.2,
+//             marginBottom: 12,
+//           }}>
+//             Treatment Packages for Every Family
+//           </h2>
+//           <p style={{ fontSize: "clamp(13px, 2.5vw, 15px)", color: "#5a7a8a", marginBottom: 20 }}>
+//             Comprehensive packages designed with your family's wellbeing in mind
+//           </p>
+//           <div style={{ display: "flex", justifyContent: "center" }}>
+//             <div style={{ width: 56, height: 4, borderRadius: 4, background: "#3bcc7a" }} />
+//           </div>
+//         </div>
+
+//         {/* Filter Tabs */}
+//         <div style={{
+//           display: "flex",
+//           flexWrap: "wrap",
+//           justifyContent: "center",
+//           gap: "8px sm:10px",
+//           marginBottom: "36px md:44px",
+//           overflowX: "auto",
+//           paddingBottom: "8px",
+//         }}>
+//           {filters.map((f) => (
+//             <button
+//               key={f}
+//               onClick={() => setActiveFilter(f)}
+//               className={`filter-btn ${activeFilter === f ? "active" : "inactive"}`}
+//             >
+//               {f}
+//             </button>
+//           ))}
+//         </div>
+
+//         {/* Cards Grid */}
+//         <div style={{
+//           display: "grid",
+//           gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+//           gap: "18px sm:20px md:24px",
+//           marginBottom: 32,
+//         }}>
+//           {filtered.map((pkg) => {
+//             const Icon = pkg.icon;
+//             return (
+//               <div key={pkg.id} className="pkg-card">
+//                 {/* Top accent bar — teal for maternity, blue for rest */}
+//                 <div style={{
+//                   height: 4,
+//                   background: pkg.category === "Maternity"
+//                     ? "linear-gradient(to right, #3bcc7a, #2caa60)"
+//                     : "linear-gradient(to right, #0870a3, #1aa3c8)",
+//                 }} />
+
+//                 <div style={{ padding: "24px 24px 28px", display: "flex", flexDirection: "column", flex: 1 }}>
+//                   {/* Label row */}
+//                   <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18 }}>
+//                     <div style={{
+//                       background: pkg.category === "Maternity" ? "#e6f9ef" : "#e6f2fa",
+//                       borderRadius: "50%",
+//                       width: 44,
+//                       height: 44,
+//                       display: "flex",
+//                       alignItems: "center",
+//                       justifyContent: "center",
+//                       flexShrink: 0,
+//                     }}>
+//                       <Icon size={20} color={pkg.category === "Maternity" ? "#2caa60" : "#0870a3"} />
+//                     </div>
+//                     <span style={{
+//                       fontSize: 10,
+//                       fontWeight: 700,
+//                       letterSpacing: "1.5px",
+//                       color: "#7a9aaa",
+//                       textTransform: "uppercase",
+//                     }}>
+//                       {pkg.label}
+//                     </span>
+//                   </div>
+
+//                   {/* Name + price inline (like reference image) */}
+//                   <div style={{
+//                     display: "flex",
+//                     justifyContent: "space-between",
+//                     alignItems: "flex-start",
+//                     marginBottom: 8,
+//                   }}>
+//                     <h3 style={{
+//                       fontSize: 20,
+//                       fontWeight: 700,
+//                       color: "#0d2d3a",
+//                       lineHeight: 1.2,
+//                       flex: 1,
+//                       paddingRight: 8,
+//                     }}>
+//                       {pkg.name}
+//                     </h3>
+//                     <div style={{ textAlign: "right", flexShrink: 0 }}>
+//                       {pkg.price ? (
+//                         <>
+//                           <p style={{
+//                             fontSize: 22,
+//                             fontWeight: 800,
+//                             color: "#0d2d3a",
+//                             lineHeight: 1,
+//                           }}>{pkg.price}</p>
+//                           <p style={{ fontSize: 11, color: "#7a9aaa", marginTop: 2 }}>onwards</p>
+//                         </>
+//                       ) : (
+//                         <span style={{
+//                           fontSize: 13,
+//                           fontWeight: 600,
+//                           color: "#0870a3",
+//                           background: "#e6f2fa",
+//                           padding: "4px 10px",
+//                           borderRadius: 6,
+//                         }}>
+//                           On Request
+//                         </span>
+//                       )}
+//                     </div>
+//                   </div>
+
+//                   {/* Description */}
+//                   <p style={{
+//                     fontSize: 13,
+//                     color: "#6a8a9a",
+//                     lineHeight: 1.6,
+//                     marginBottom: 20,
+//                   }}>
+//                     {pkg.description}
+//                   </p>
+
+//                   {/* Divider */}
+//                   <div style={{
+//                     borderTop: "1px solid #eef3f6",
+//                     marginBottom: 16,
+//                   }} />
+
+//                   {/* Features */}
+//                   <div style={{ marginBottom: 24, flex: 1 }}>
+//                     {pkg.features.map((f, i) => (
+//                       <div key={i} className="feature-item">
+//                         <div className="check-icon">
+//                           <svg width="9" height="7" viewBox="0 0 9 7" fill="none">
+//                             <path d="M1 3.5L3.2 6L8 1" stroke="#3bcc7a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+//                           </svg>
+//                         </div>
+//                         <span style={{ textTransform: "uppercase", fontSize: 11, fontWeight: 600, letterSpacing: "0.8px" }}>
+//                           {f}
+//                         </span>
+//                       </div>
+//                     ))}
+//                   </div>
+
+//                   {/* CTA */}
+//                   <button className="cta-btn">{pkg.cta}</button>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div>
+
+//         {/* Bottom note */}
+//         <p style={{
+//           textAlign: "center",
+//           fontSize: 12,
+//           color: "#8aacba",
+//           marginTop: 8,
+//         }}>
+//           All packages include GST. Final pricing confirmed during consultation.
+//         </p>
+//       </div>
+//     </section>
+//   );
+// }
 import { useState } from "react";
 import { Heart, Scissors, Droplet, Brain, Baby, Activity } from "lucide-react";
 
@@ -411,6 +802,8 @@ const packages = [
 
 const filters = ["All", "Maternity", "Surgery", "Urology", "Cardiology", "Neurology"];
 
+const WHATSAPP_NUMBER = "918431193373";
+
 export default function PricingSection() {
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -419,15 +812,19 @@ export default function PricingSection() {
       ? packages
       : packages.filter((p) => p.category === activeFilter);
 
+  const handleEnquireClick = (packageName: string) => {
+    const msg = encodeURIComponent(
+      `Hello SM Hospital,\n\nI am interested in the ${packageName} package and would like more information.\n\nPlease contact me soon.`
+    );
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank");
+  };
+
   return (
-    <section
-      style={{
-        background: "linear-gradient(160deg, #f0f9f6 0%, #e6f4f1 50%, #eaf6fb 100%)",
-        padding: "60px 20px sm:80px 24px md:80px",
-        fontFamily: "'DM Sans', 'Segoe UI', sans-serif",
-      }}
-    >
-      {/* Google Font */}
+    <section style={{
+      background: "linear-gradient(160deg, #f0f9f6 0%, #e6f4f1 50%, #eaf6fb 100%)",
+      padding: "48px 16px",
+      fontFamily: "'DM Sans', 'Segoe UI', sans-serif",
+    }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
@@ -503,12 +900,34 @@ export default function PricingSection() {
           justify-content: center;
           flex-shrink: 0;
         }
+        .cards-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 16px;
+          margin-bottom: 32px;
+        }
+        @media (min-width: 540px) {
+          section {
+            padding: 60px 24px;
+          }
+          .cards-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+          }
+        }
+        @media (min-width: 768px) {
+          section {
+            padding: 80px 24px;
+          }
+          .cards-grid {
+            gap: 24px;
+          }
+        }
       `}</style>
 
       <div style={{ maxWidth: 1160, margin: "0 auto" }}>
-
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "40px md:48px" }}>
+        <div style={{ textAlign: "center", marginBottom: "32px" }}>
           <p style={{
             fontSize: "clamp(10px, 2vw, 11px)",
             fontWeight: 700,
@@ -541,8 +960,8 @@ export default function PricingSection() {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          gap: "8px sm:10px",
-          marginBottom: "36px md:44px",
+          gap: "8px",
+          marginBottom: "32px",
           overflowX: "auto",
           paddingBottom: "8px",
         }}>
@@ -558,17 +977,12 @@ export default function PricingSection() {
         </div>
 
         {/* Cards Grid */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-          gap: "18px sm:20px md:24px",
-          marginBottom: 32,
-        }}>
+        <div className="cards-grid">
           {filtered.map((pkg) => {
             const Icon = pkg.icon;
             return (
               <div key={pkg.id} className="pkg-card">
-                {/* Top accent bar — teal for maternity, blue for rest */}
+                {/* Top accent bar */}
                 <div style={{
                   height: 4,
                   background: pkg.category === "Maternity"
@@ -576,7 +990,7 @@ export default function PricingSection() {
                     : "linear-gradient(to right, #0870a3, #1aa3c8)",
                 }} />
 
-                <div style={{ padding: "24px 24px 28px", display: "flex", flexDirection: "column", flex: 1 }}>
+                <div style={{ padding: "24px", display: "flex", flexDirection: "column", flex: 1 }}>
                   {/* Label row */}
                   <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18 }}>
                     <div style={{
@@ -602,7 +1016,7 @@ export default function PricingSection() {
                     </span>
                   </div>
 
-                  {/* Name + price inline (like reference image) */}
+                  {/* Name + price */}
                   <div style={{
                     display: "flex",
                     justifyContent: "space-between",
@@ -610,7 +1024,7 @@ export default function PricingSection() {
                     marginBottom: 8,
                   }}>
                     <h3 style={{
-                      fontSize: 20,
+                      fontSize: "clamp(16px, 3vw, 20px)",
                       fontWeight: 700,
                       color: "#0d2d3a",
                       lineHeight: 1.2,
@@ -647,7 +1061,7 @@ export default function PricingSection() {
 
                   {/* Description */}
                   <p style={{
-                    fontSize: 13,
+                    fontSize: "clamp(12px, 2.5vw, 13px)",
                     color: "#6a8a9a",
                     lineHeight: 1.6,
                     marginBottom: 20,
@@ -678,7 +1092,12 @@ export default function PricingSection() {
                   </div>
 
                   {/* CTA */}
-                  <button className="cta-btn">{pkg.cta}</button>
+                  <button 
+                    className="cta-btn"
+                    onClick={() => handleEnquireClick(pkg.name)}
+                  >
+                    {pkg.cta}
+                  </button>
                 </div>
               </div>
             );

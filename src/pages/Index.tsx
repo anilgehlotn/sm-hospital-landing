@@ -11,6 +11,8 @@ import EmergencyBanner from "@/components/EmergencyBanner";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
+import TreatmentPackages from "@/components/Treatmentpackages";
+import SurgicalProcedures from "@/components/Surgicalprocedure";
 
 const Index = () => (
   <div className="min-h-screen">
@@ -20,7 +22,9 @@ const Index = () => (
     <AboutSection />
     <ServicesGrid />
     <SpecialtiesSection />
-    <PricingSection />
+    <TreatmentPackages/>
+    <SurgicalProcedures/>
+    {/* <PricingSection /> */}
     <TeamSection />
     <HowItWorks />
     <EmergencyBanner />
