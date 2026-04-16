@@ -975,7 +975,7 @@ const doctors: Doctor[] = [
     id: 1,
     name: "Dr. Mamatha T S",
     role: "Lead Specialist",
-    qualification: "MBBS, MS (OBG)",
+    qualification: "",
     department: "OBG & Maternity",
     rating: 4.9,
     reviews: 312,

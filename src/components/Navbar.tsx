@@ -406,6 +406,267 @@
 
 // export default Navbar;
 
+// import { useState, useEffect } from "react";
+// import { Menu, X, Phone } from "lucide-react";
+
+// const WHATSAPP_NUMBER = "918431193373";
+// const WHATSAPP_MSG = encodeURIComponent("Hello, I want to book an appointment at SM Hospital.");
+
+// const navLinks = [
+//   { label: "Home", href: "#home" },
+//   { label: "About", href: "#about" },
+//   { label: "Services", href: "#services" },
+//   { label: "How It Works", href: "#how-it-works" },
+//   { label: "Contact", href: "#contact" },
+// ];
+
+// const Navbar = () => {
+//   const [scrolled, setScrolled] = useState(false);
+//   const [mobileOpen, setMobileOpen] = useState(false);
+
+//   useEffect(() => {
+//     const onScroll = () => setScrolled(window.scrollY > 60);
+//     window.addEventListener("scroll", onScroll);
+//     return () => window.removeEventListener("scroll", onScroll);
+//   }, []);
+
+//   return (
+//     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white shadow-md">
+//       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-[66px]">
+
+//         {/* BRAND */}
+//         <a
+//           href="#home"
+//           className="inline-flex items-center gap-2 sm:gap-3 flex-shrink-0"
+//         >
+//           <img
+//             src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776365887/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek.png"
+//             alt="SM Hospital"
+//             className="h-12 sm:h-14 w-auto object-contain"
+//           />
+//           <div className="flex flex-col items-center">
+//             <div className="flex items-center gap-2 sm:gap-3">
+//               <span className="text-2xl sm:text-3xl font-extrabold tracking-tight" style={{ color: "#007dbd" }}>SM</span>
+//               <span className="text-2xl sm:text-3xl font-extrabold tracking-tight" style={{ color: "#007dbd" }}>HOSPITAL</span>
+//             </div>
+//             <div
+//               className="text-[7px] sm:text-[9px] font-semibold uppercase text-center"
+//               style={{ color: "#42ba10", lineHeight: 1.4, letterSpacing: "1px" }}
+//             >
+//               Proud to Serve
+//             </div>
+//           </div>
+//         </a>
+
+//         {/* DESKTOP NAV */}
+//         <div className="hidden md:flex items-center gap-4 lg:gap-7">
+//           {navLinks.map((l) => (
+            
+//               key={l.href}
+//               href={l.href}
+//               className="text-xs sm:text-sm font-semibold text-slate-900 transition-colors hover:text-[#40ad4c]"
+//             >
+//               {l.label}
+//             </a>
+//           ))}
+          
+//             href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="inline-flex items-center gap-2 rounded-lg sm:rounded-[9px] px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-white transition-all hover:-translate-y-px hover:shadow-xl flex-shrink-0"
+//             style={{
+//               background: "linear-gradient(135deg, #40ad4c, #2e9440)",
+//               boxShadow: "0 2px 14px rgba(64,173,76,0.4)",
+//             }}
+//           >
+//             <Phone size={13} className="hidden sm:inline" />
+//             <span className="hidden sm:inline">Book Now</span>
+//             <span className="sm:hidden">Book</span>
+//           </a>
+//         </div>
+
+//         {/* MOBILE TOGGLE */}
+//         <button
+//           className="md:hidden p-1 text-slate-900"
+//           onClick={() => setMobileOpen(!mobileOpen)}
+//           aria-label="Toggle menu"
+//         >
+//           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+//         </button>
+//       </div>
+
+//       {/* MOBILE MENU */}
+//       {mobileOpen && (
+//         <div className="md:hidden bg-white shadow-xl border-t border-slate-100">
+//           <div className="px-4 py-3 max-h-[calc(100vh-66px)] overflow-y-auto">
+//             {/* Mobile brand header */}
+//             <div className="flex items-center gap-3 py-3 border-b border-slate-100 mb-3">
+//               <img
+//                 src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776365887/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek.png"
+//                 alt="SM Hospital"
+//                 className="h-10 w-auto object-contain"
+//               />
+//               <div className="flex flex-col items-center">
+//                 <div className="flex items-center gap-2">
+//                   <span className="text-xl font-extrabold tracking-tight" style={{ color: "#007dbd" }}>SM</span>
+//                   <span className="text-xl font-extrabold tracking-tight" style={{ color: "#007dbd" }}>HOSPITAL</span>
+//                 </div>
+//                 <div
+//                   className="text-[7px] font-semibold uppercase text-center"
+//                   style={{ color: "#42ba10", lineHeight: 1.4, letterSpacing: "1px" }}
+//                 >
+//                   Proud to Serve
+//                 </div>
+//               </div>
+//             </div>
+
+//             {navLinks.map((l) => (
+              
+//                 key={l.href}
+//                 href={l.href}
+//                 onClick={() => setMobileOpen(false)}
+//                 className="block py-3 px-2 text-slate-700 font-medium border-b border-slate-100 last:border-0 hover:text-[#40ad4c] hover:bg-slate-50 rounded transition-colors"
+//               >
+//                 {l.label}
+//               </a>
+//             ))}
+            
+//               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               onClick={() => setMobileOpen(false)}
+//               className="mt-3 w-full inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold text-white"
+//               style={{ background: "linear-gradient(135deg, #40ad4c, #2e9440)" }}
+//             >
+//               <Phone size={13} /> Book Now
+//             </a>
+//           </div>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
+// import { useState, useEffect } from "react";
+// import { Menu, X, Phone } from "lucide-react";
+
+// const WHATSAPP_NUMBER = "918431193373";
+// const WHATSAPP_MSG = encodeURIComponent("Hello, I want to book an appointment at SM Hospital.");
+
+// const navLinks = [
+//   { label: "Home", href: "#home" },
+//   { label: "About", href: "#about" },
+//   { label: "Services", href: "#services" },
+//   { label: "How It Works", href: "#how-it-works" },
+//   { label: "Contact", href: "#contact" },
+// ];
+
+// const Navbar = () => {
+//   const [scrolled, setScrolled] = useState(false);
+//   const [mobileOpen, setMobileOpen] = useState(false);
+
+//   useEffect(() => {
+//     const onScroll = () => setScrolled(window.scrollY > 60);
+//     window.addEventListener("scroll", onScroll);
+//     return () => window.removeEventListener("scroll", onScroll);
+//   }, []);
+
+//   return (
+//     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white shadow-md">
+//       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-[70px]">
+
+//         {/* BRAND — just the full logo image, it already contains icon + text + tagline */}
+//         <a href="#home" className="inline-flex items-center flex-shrink-0">
+//           <img
+//             src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776365887/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek.png"
+//             alt="SM Hospital — Proud to Serve"
+//             className="h-12 sm:h-14 w-auto object-contain"
+//           />
+//         </a>
+
+//         {/* DESKTOP NAV */}
+//         <div className="hidden md:flex items-center gap-4 lg:gap-7">
+//           {navLinks.map((l) => (
+//             <a
+//               key={l.href}
+//               href={l.href}
+//               className="text-xs sm:text-sm font-semibold text-slate-900 transition-colors hover:text-[#40ad4c]"
+//             >
+//               {l.label}
+//             </a>
+//           ))}
+//           <a
+//             href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="inline-flex items-center gap-2 rounded-lg sm:rounded-[9px] px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-white transition-all hover:-translate-y-px hover:shadow-xl flex-shrink-0"
+//             style={{
+//               background: "linear-gradient(135deg, #40ad4c, #2e9440)",
+//               boxShadow: "0 2px 14px rgba(64,173,76,0.4)",
+//             }}
+//           >
+//             <Phone size={13} className="hidden sm:inline" />
+//             <span className="hidden sm:inline">Book Now</span>
+//             <span className="sm:hidden">Book</span>
+//           </a>
+//         </div>
+
+//         {/* MOBILE TOGGLE */}
+//         <button
+//           className="md:hidden p-1 text-slate-900"
+//           onClick={() => setMobileOpen(!mobileOpen)}
+//           aria-label="Toggle menu"
+//         >
+//           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+//         </button>
+//       </div>
+
+//       {/* MOBILE MENU */}
+//       {mobileOpen && (
+//         <div className="md:hidden bg-white shadow-xl border-t border-slate-100">
+//           <div className="px-4 py-3 max-h-[calc(100vh-70px)] overflow-y-auto">
+
+//             {/* Mobile brand header */}
+//             <div className="flex items-center py-3 border-b border-slate-100 mb-3">
+//               <img
+//                 src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776365887/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek.png"
+//                 alt="SM Hospital — Proud to Serve"
+//                 className="h-12 w-auto object-contain"
+//               />
+//             </div>
+
+//             {navLinks.map((l) => (
+//               <a
+//                 key={l.href}
+//                 href={l.href}
+//                 onClick={() => setMobileOpen(false)}
+//                 className="block py-3 px-2 text-slate-700 font-medium border-b border-slate-100 last:border-0 hover:text-[#40ad4c] hover:bg-slate-50 rounded transition-colors"
+//               >
+//                 {l.label}
+//               </a>
+//             ))}
+
+//             <a
+//               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               onClick={() => setMobileOpen(false)}
+//               className="mt-3 w-full inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold text-white"
+//               style={{ background: "linear-gradient(135deg, #40ad4c, #2e9440)" }}
+//             >
+//               <Phone size={13} /> Book Now
+//             </a>
+//           </div>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 
@@ -420,42 +681,79 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
+// Inject font globally once
+const injectFont = () => {
+  if (document.getElementById("lemon-milk-font")) return;
+  const style = document.createElement("style");
+  style.id = "lemon-milk-font";
+  style.innerHTML = `
+    @font-face {
+      font-family: 'LemonMilk';
+      src: url('/fonts/LemonMilkPro-Regular.woff2') format('woff2'),
+           url('/fonts/LemonMilkPro-Regular.woff') format('woff'),
+           url('/fonts/LemonMilkPro-Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+  `;
+  document.head.appendChild(style);
+};
+
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    injectFont();
   }, []);
 
+  const Brand = ({
+    imgClass = "h-10 sm:h-12",
+    titleSize = "1.35rem",
+    tagSize = "0.55rem",
+  }) => (
+    <div className="inline-flex items-center gap-2 sm:gap-3">
+      <img
+        src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776365887/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek.png"
+        alt="SM Hospital logo icon"
+        className={`${imgClass} w-auto object-contain`}
+      />
+      <div className="flex flex-col items-center leading-none">
+        <span
+          style={{
+            fontFamily: "'LemonMilk', 'Arial Black', Arial, sans-serif",
+            fontSize: titleSize,
+            color: "#007dbd",
+            letterSpacing: "0.04em",
+            lineHeight: 1,
+          }}
+        >
+          SM HOSPITAL
+        </span>
+        <span
+          style={{
+            fontFamily: "Arial, sans-serif",
+            fontSize: tagSize,
+            color: "#42ba10",
+            letterSpacing: "3px",
+            fontWeight: 700,
+            textTransform: "uppercase",
+            marginTop: "5px",
+          }}
+        >
+          PROUD TO SERVE
+        </span>
+      </div>
+    </div>
+  );
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white shadow-md">
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-[66px]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-[70px]">
 
         {/* BRAND */}
-        <a
-          href="#home"
-          className="inline-flex items-center gap-2 sm:gap-3 flex-shrink-0"
-        >
-          <img
-            src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776365887/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek.png"
-            alt="SM Hospital"
-            className="h-10 sm:h-12 w-auto object-contain"
-          />
-          <div className="flex flex-col leading-none gap-0.5">
-            <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-              <span style={{ color: "#007dbd" }}>SM </span>
-              <span style={{ color: "#007dbd" }}>Hospital</span>
-            </div>
-            <div
-              className="text-[9px] sm:text-[11px] md:text-[12px] font-semibold uppercase tracking-[2px]"
-              style={{ color: "#42ba10" }}
-            >
-              Proud to Serve
-            </div>
-          </div>
+        <a href="#home" className="flex-shrink-0">
+          <Brand />
         </a>
 
         {/* DESKTOP NAV */}
@@ -485,7 +783,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* MOBILE TOGGLE — always dark so it's visible on any hero bg */}
+        {/* MOBILE TOGGLE */}
         <button
           className="md:hidden p-1 text-slate-900"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -498,14 +796,11 @@ const Navbar = () => {
       {/* MOBILE MENU */}
       {mobileOpen && (
         <div className="md:hidden bg-white shadow-xl border-t border-slate-100">
-          <div className="px-4 py-3 max-h-[calc(100vh-66px)] overflow-y-auto">
+          <div className="px-4 py-3 max-h-[calc(100vh-70px)] overflow-y-auto">
+
             {/* Mobile brand header */}
-            <div className="flex items-center gap-3 py-3 border-b border-slate-100 mb-3">
-              <img
-                src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776365887/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek.png"
-                alt="SM Hospital"
-                className="h-10 w-auto object-contain"
-              />
+            <div className="flex items-center py-3 border-b border-slate-100 mb-3">
+              <Brand imgClass="h-9" titleSize="1.1rem" tagSize="0.5rem" />
             </div>
 
             {navLinks.map((l) => (
@@ -518,6 +813,7 @@ const Navbar = () => {
                 {l.label}
               </a>
             ))}
+
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
               target="_blank"
