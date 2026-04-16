@@ -153,7 +153,7 @@ const Footer = () => (
       <div>
         <a href="#home" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 16, textDecoration: "none" }}>
           <img
-            src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776365887/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek.png"
+            src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776370332/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek-removebg-preview_up2gad.png"
             alt="SM Hospital logo icon"
             style={{ height: 48, width: "auto", objectFit: "contain", objectPosition: "top" }}
           />
