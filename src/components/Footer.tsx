@@ -61,6 +61,7 @@
 // );
 
 // export default Footer;
+// 
 const Footer = () => (
   <footer
     style={{
@@ -148,18 +149,38 @@ const Footer = () => (
 
     <div className="footer-grid">
 
-      {/* Brand */}
+      {/* Brand — matches Navbar exactly */}
       <div>
-        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-          <img 
-            src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776076608/Screenshot_2026-04-13_at_4.06.42_PM_be52kc.png"
-            alt="SM Hospital Logo"
-            style={{ height: 40, width: "auto" }}
+        <a href="#home" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 16, textDecoration: "none" }}>
+          <img
+            src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776365887/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek.png"
+            alt="SM Hospital logo icon"
+            style={{ height: 48, width: "auto", objectFit: "contain", objectPosition: "top" }}
           />
-          <p style={{ fontSize: 18, fontWeight: 800, color: "#fff", margin: 0 }}>
-            SM <span style={{ color: "#3bcc7a" }}>Hospital</span>
-          </p>
-        </div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", lineHeight: 1 }}>
+            <span style={{
+              fontSize: 22,
+              fontWeight: 900,
+              letterSpacing: "0.05em",
+              textTransform: "uppercase",
+              color: "#007dbd",
+              fontFamily: "'Arial Black', 'Arial Bold', Arial, sans-serif",
+            }}>
+              SM HOSPITAL
+            </span>
+            <span style={{
+              fontSize: 10,
+              fontWeight: 700,
+              textTransform: "uppercase",
+              letterSpacing: "3px",
+              marginTop: 2,
+              color: "#42ba10",
+              fontFamily: "Arial, sans-serif",
+            }}>
+              PROUD TO SERVE
+            </span>
+          </div>
+        </a>
         <p style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", lineHeight: 1.75 }}>
           Your trusted healthcare partner providing accessible, affordable and quality care for everyone in Nayandahalli, Bengaluru.
         </p>
