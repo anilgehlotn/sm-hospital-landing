@@ -531,7 +531,7 @@ const doctors: Doctor[] = [
   },
   {
     id: 9,
-    name: "Dr. Pandee Darappa",
+    name: "Dr Pandu Dasappa",
     role: "Oncologist",
     qualification: "MBBS, MS, MCH",
     department: "Oncology",
