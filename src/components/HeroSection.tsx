@@ -127,7 +127,7 @@ const HeroSection = () => (
                 className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider mt-0.5"
                 style={{ color: "#40ad4c" }}
               >
-                MD &nbsp;·&nbsp; Medical Director
+                MD &nbsp;·&nbsp; Managing Director
               </p>
             </div>
           </div>

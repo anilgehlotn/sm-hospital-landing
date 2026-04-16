@@ -681,65 +681,33 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
-// Inject font globally once
-const injectFont = () => {
-  if (document.getElementById("lemon-milk-font")) return;
-  const style = document.createElement("style");
-  style.id = "lemon-milk-font";
-  style.innerHTML = `
-    @font-face {
-      font-family: 'LemonMilk';
-      src: url('/fonts/LemonMilkPro-Regular.woff2') format('woff2'),
-           url('/fonts/LemonMilkPro-Regular.woff') format('woff'),
-           url('/fonts/LemonMilkPro-Regular.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-  `;
-  document.head.appendChild(style);
-};
-
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    injectFont();
+    const onScroll = () => {};
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const Brand = ({
-    imgClass = "h-10 sm:h-12",
-    titleSize = "1.35rem",
-    tagSize = "0.55rem",
-  }) => (
-    <div className="inline-flex items-center gap-2 sm:gap-3">
+  const Brand = ({ imgClass = "h-10 sm:h-12", titleClass = "text-xl sm:text-2xl", tagClass = "text-[8px] sm:text-[10px]" }) => (
+    <div className="inline-flex items-center gap-2">
       <img
         src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776365887/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek.png"
         alt="SM Hospital logo icon"
         className={`${imgClass} w-auto object-contain`}
+        style={{ objectPosition: "top" }}
       />
       <div className="flex flex-col items-center leading-none">
         <span
-          style={{
-            fontFamily: "'LemonMilk', 'Arial Black', Arial, sans-serif",
-            fontSize: titleSize,
-            color: "#007dbd",
-            letterSpacing: "0.04em",
-            lineHeight: 1,
-          }}
+          className={`${titleClass} font-black tracking-wide uppercase`}
+          style={{ color: "#007dbd", fontFamily: "'Arial Black', 'Arial Bold', Arial, sans-serif" }}
         >
           SM HOSPITAL
         </span>
         <span
-          style={{
-            fontFamily: "Arial, sans-serif",
-            fontSize: tagSize,
-            color: "#42ba10",
-            letterSpacing: "3px",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            marginTop: "5px",
-          }}
+          className={`${tagClass} font-bold uppercase tracking-[3px] mt-0.5`}
+          style={{ color: "#42ba10", fontFamily: "Arial, sans-serif" }}
         >
           PROUD TO SERVE
         </span>
@@ -800,7 +768,7 @@ const Navbar = () => {
 
             {/* Mobile brand header */}
             <div className="flex items-center py-3 border-b border-slate-100 mb-3">
-              <Brand imgClass="h-9" titleSize="1.1rem" tagSize="0.5rem" />
+              <Brand imgClass="h-9" titleClass="text-lg" tagClass="text-[8px]" />
             </div>
 
             {navLinks.map((l) => (
