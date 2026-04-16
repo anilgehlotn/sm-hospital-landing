@@ -699,7 +699,7 @@
 //   );
 // }
 import { useState } from "react";
-import { Heart, Scissors, Droplet, Brain, Baby, Activity } from "lucide-react";
+import { Heart, Brain, Baby, Activity } from "lucide-react";
 
 const packages = [
   {
@@ -736,38 +736,6 @@ const packages = [
   },
   {
     id: 3,
-    category: "Surgery",
-    name: "Hernia Surgery",
-    label: "FOR GENERAL SURGERY",
-    description: "Advanced laparoscopic hernia repair with minimal downtime.",
-    price: null,
-    cta: "Enquire Now",
-    features: [
-      "Surgical consult",
-      "Laparoscopic option",
-      "2-day hospital stay",
-      "Post-op follow-up",
-    ],
-    icon: Scissors,
-  },
-  {
-    id: 4,
-    category: "Urology",
-    name: "Kidney Stone — URSL",
-    label: "FOR UROLOGICAL CARE",
-    description: "Precision laser-based kidney stone removal with stenting if needed.",
-    price: null,
-    cta: "Enquire Now",
-    features: [
-      "Urology consult",
-      "Laser lithotripsy",
-      "Stenting if needed",
-      "Post-procedure care",
-    ],
-    icon: Droplet,
-  },
-  {
-    id: 5,
     category: "Cardiology",
     name: "Hypertension Package",
     label: "FOR CARDIAC HEALTH",
@@ -783,7 +751,7 @@ const packages = [
     icon: Activity,
   },
   {
-    id: 6,
+    id: 4,
     category: "Neurology",
     name: "Neuro Evaluation",
     label: "FOR NEUROLOGICAL CARE",

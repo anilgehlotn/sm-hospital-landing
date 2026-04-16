@@ -276,11 +276,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white shadow-md"
-          : "bg-white/15 backdrop-blur-md border-b border-white/10"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white shadow-md"
     >
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-[66px]">
 
@@ -305,13 +301,13 @@ const Navbar = () => {
             style={!scrolled ? { filter: "brightness(1.12) drop-shadow(0 1px 6px rgba(0,0,0,0.2))" } : {}}
           />
           <div className="flex flex-col gap-0.5">
-            <div className="text-base sm:text-lg md:text-2xl font-extrabold leading-none tracking-tight">
-              <span style={{ color: scrolled ? "#2caa60" : "#2caa60" }}>SM </span>
-              <span style={{ color: scrolled ? "#1e4ea8" : "#1e4ea8" }}>Hospital</span>
+            <div className="text-2xl sm:text-4xl md:text-5xl font-extrabold leading-none tracking-tight">
+              <span style={{ color: "#007dbd" }}>SM </span>
+              <span style={{ color: "#007dbd" }}>Hospital</span>
             </div>
             <div
-              className="text-[7px] sm:text-[10px] font-semibold uppercase tracking-[0.5px] sm:tracking-[2px] transition-colors duration-500"
-              style={{ color: scrolled ? "#94a3b8" : "rgba(255,255,255,0.6)" }}
+              className="text-[8px] sm:text-xs font-semibold uppercase tracking-[1px] sm:tracking-[2px] transition-colors duration-500"
+              style={{ color: "#42ba10" }}
             >
               Proud to Serve
             </div>
@@ -371,11 +367,11 @@ const Navbar = () => {
                 className="h-8 w-8 object-cover rounded-full"
               />
               <div className="flex flex-col gap-0.5">
-                <div className="text-lg sm:text-xl md:text-2xl font-extrabold leading-none tracking-tight">
-                  <span style={{ color: "#2caa60" }}>SM </span>
-                  <span style={{ color: "#1e4ea8" }}>Hospital</span>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-none tracking-tight">
+                  <span style={{ color: "#007dbd" }}>SM </span>
+                  <span style={{ color: "#007dbd" }}>Hospital</span>
                 </div>
-                <div className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[1px] text-slate-400">
+                <div className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-[1px] text-slate-400" style={{ color: "#42ba10" }}>
                   Proud to Serve
                 </div>
               </div>

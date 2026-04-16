@@ -77,11 +77,16 @@ const categories = [
     label: "Urological Procedures",
     shortLabel: "Urology",
     color: "blue",
-    count: 3,
+    count: 5,
     procedures: [
       { name: "Hydrocele Repair" },
       { name: "Varicocele Surgery" },
       { name: "Suprapubic Catheterization" },
+      { name: "Urology consult" },
+      { name: "Laser lithotripsy" },
+      { name: "Stenting if needed" },
+      { name: "Post-procedure care" },
+      { name: "Flush therapy" },
     ],
   },
   {
