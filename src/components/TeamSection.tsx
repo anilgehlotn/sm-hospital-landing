@@ -428,7 +428,7 @@ const doctors: Doctor[] = [
     id: 1,
     name: "Dr. Mamatha T.S.",
     role: "Lead Specialist",
-    qualification: "MBBS, MD",
+    qualification: "Managing Director",
     department: "OBG & Maternity",
     experience: "14 yrs",
     phone: "+91 97311 07743",
@@ -440,7 +440,7 @@ const doctors: Doctor[] = [
   },
   {
     id: 2,
-    name: "Dr. Devendra Naik N",
+    name: "Dr. Devendr Naik",
     role: "General Physician",
     qualification: "MBBS, MD",
     department: "General Medicine",
@@ -453,7 +453,7 @@ const doctors: Doctor[] = [
   },
   {
     id: 3,
-    name: "Dr. Niranjan Monty U.N.",
+    name: "Dr. Niranjan Murthy UN",
     role: "General Physician",
     qualification: "MBBS, MD",
     department: "General Medicine",
@@ -596,7 +596,7 @@ const doctors: Doctor[] = [
   },
   {
     id: 14,
-    name: "Dr. Yashwanth",
+    name: "Dr. Yashwant M",
     role: "Paediatric Consultant",
     qualification: "MBBS, MD",
     department: "Pediatrics",
