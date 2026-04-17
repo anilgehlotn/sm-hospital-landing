@@ -544,7 +544,7 @@ const doctors: Doctor[] = [
   },
   {
     id: 10,
-    name: "Dr. Kumarswarny M.N.",
+    name: "Dr Kumarswamy M N",
     role: "Anaesthesiologist",
     qualification: "MBBS, DA",
     department: "Anaesthesiology",

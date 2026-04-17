@@ -667,7 +667,7 @@
 
 // export default Navbar;
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 
 const WHATSAPP_NUMBER = "918431193373";
@@ -684,30 +684,23 @@ const navLinks = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => {};
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const Brand = ({ imgClass = "h-10 sm:h-12", titleClass = "text-xl sm:text-2xl", tagClass = "text-[8px] sm:text-[10px]" }) => (
-    <div className="inline-flex items-center gap-2">
+  const Brand = ({ imgClass = "h-12 sm:h-14", titleClass = "text-2xl sm:text-4xl md:text-5xl", tagClass = "text-[10px] sm:text-[14px] md:text-base" }) => (
+    <div className="inline-flex items-center gap-2 sm:gap-3">
       <img
-        src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776365887/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek.png"
-        alt="SM Hospital logo icon"
+        src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776370332/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek-removebg-preview_up2gad.png"
+        alt="SM Hospital logo"
         className={`${imgClass} w-auto object-contain`}
-        style={{ objectPosition: "top" }}
       />
-      <div className="flex flex-col items-center leading-none">
+      <div className="flex flex-col items-start leading-tight">
         <span
-          className={`${titleClass} font-black tracking-wide uppercase`}
-          style={{ color: "#007dbd", fontFamily: "'Arial Black', 'Arial Bold', Arial, sans-serif" }}
+          className={`${titleClass} font-lemon-milk font-bold uppercase tracking-wider`}
+          style={{ color: "#007dbd", letterSpacing: "0.08em" }}
         >
           SM HOSPITAL
         </span>
         <span
-          className={`${tagClass} font-bold uppercase tracking-[3px] mt-0.5`}
-          style={{ color: "#42ba10", fontFamily: "Arial, sans-serif" }}
+          className={`${tagClass} font-lemon-milk font-bold uppercase tracking-widest`}
+          style={{ color: "#42ba10", letterSpacing: "0.15em" }}
         >
           PROUD TO SERVE
         </span>
@@ -767,8 +760,8 @@ const Navbar = () => {
           <div className="px-4 py-3 max-h-[calc(100vh-70px)] overflow-y-auto">
 
             {/* Mobile brand header */}
-            <div className="flex items-center py-3 border-b border-slate-100 mb-3">
-              <Brand imgClass="h-9" titleClass="text-lg" tagClass="text-[8px]" />
+            <div className="flex items-center gap-2 py-3 border-b border-slate-100 mb-3">
+              <Brand imgClass="h-9 sm:h-10" titleClass="text-lg sm:text-xl" tagClass="text-[7px] sm:text-[9px]" />
             </div>
 
             {navLinks.map((l) => (
