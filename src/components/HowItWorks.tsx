@@ -485,36 +485,7 @@ const Facilities = () => (
           />
         </div>
 
-        {/* Teal oval — bottom right */}
-        <svg
-          viewBox="0 0 300 110"
-          style={{
-            position: "absolute",
-            bottom: 10,
-            right: -20,
-            width: 240,
-            pointerEvents: "none",
-            zIndex: 3,
-          }}
-        >
-          <ellipse cx="150" cy="55" rx="145" ry="48" fill="none" stroke="#1dbf9a" strokeWidth="2.5" />
-        </svg>
 
-        {/* Second smaller teal oval — bottom left */}
-        <svg
-          viewBox="0 0 300 110"
-          style={{
-            position: "absolute",
-            bottom: -10,
-            left: 20,
-            width: 190,
-            pointerEvents: "none",
-            zIndex: 3,
-            opacity: 0.65,
-          }}
-        >
-          <ellipse cx="150" cy="55" rx="145" ry="48" fill="none" stroke="#1dbf9a" strokeWidth="2" />
-        </svg>
       </div>
 
       {/* ── RIGHT: Label + heading + facilities ── */}

@@ -157,29 +157,11 @@ const Footer = () => (
             alt="SM Hospital logo icon"
             style={{ height: 48, width: "auto", objectFit: "contain", objectPosition: "top" }}
           />
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", lineHeight: 1 }}>
-            <span style={{
-              fontSize: 22,
-              fontWeight: 900,
-              letterSpacing: "0.05em",
-              textTransform: "uppercase",
-              color: "#007dbd",
-              fontFamily: "'Arial Black', 'Arial Bold', Arial, sans-serif",
-            }}>
-              SM HOSPITAL
-            </span>
-            <span style={{
-              fontSize: 10,
-              fontWeight: 700,
-              textTransform: "uppercase",
-              letterSpacing: "3px",
-              marginTop: 2,
-              color: "#42ba10",
-              fontFamily: "Arial, sans-serif",
-            }}>
-              PROUD TO SERVE
-            </span>
-          </div>
+          <img
+            src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776750172/Screenshot_2026-04-21_at_9.36.12_AM-removebg-preview_bzfgpy.png"
+            alt="SM HOSPITAL"
+            style={{ height: 50, width: "auto", objectFit: "contain", display: "block" }}
+          />
         </a>
         <p style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", lineHeight: 1.75 }}>
           Your trusted healthcare partner providing accessible, affordable and quality care for everyone in Nayandahalli, Bengaluru.
@@ -246,16 +228,18 @@ const Footer = () => (
     </div>
 
     {/* Wordmark */}
-    <div style={{ maxWidth: 1100, margin: "0 auto", overflow: "hidden" }}>
-      <p style={{
-        fontSize: "clamp(48px,9vw,96px)",
-        fontWeight: 800,
-        color: "rgba(255,255,255,0.05)",
-        lineHeight: 1,
-        userSelect: "none",
-      }}>
-        SM Hospital
-      </p>
+    <div style={{ maxWidth: 1100, margin: "0 auto", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", padding: "40px 0" }}>
+      <img
+        src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776750172/Screenshot_2026-04-21_at_9.36.12_AM-removebg-preview_bzfgpy.png"
+        alt="SM Hospital Wordmark"
+        style={{
+          maxWidth: "clamp(200px, 50vw, 500px)",
+          height: "auto",
+          width: "100%",
+          objectFit: "contain",
+          opacity: 0.35,
+        }}
+      />
     </div>
 
     {/* Bottom bar */}
