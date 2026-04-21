@@ -684,27 +684,19 @@ const navLinks = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const Brand = ({ imgClass = "h-12 sm:h-14", titleClass = "text-2xl sm:text-4xl md:text-5xl", tagClass = "text-[10px] sm:text-[14px] md:text-base" }) => (
+  const Brand = ({ imgClass = "h-16 sm:h-20", titleClass = "text-2xl sm:text-4xl md:text-5xl" }) => (
     <div className="inline-flex items-center gap-2 sm:gap-3">
       <img
         src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776370332/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek-removebg-preview_up2gad.png"
         alt="SM Hospital logo"
         className={`${imgClass} w-auto object-contain`}
       />
-      <div className="flex flex-col items-start leading-tight">
-        <span
-          className={`${titleClass} font-lemon-milk font-bold uppercase tracking-wider`}
-          style={{ color: "#007dbd", letterSpacing: "0.08em" }}
-        >
-          SM HOSPITAL
-        </span>
-        <span
-          className={`${tagClass} font-lemon-milk font-bold uppercase tracking-widest`}
-          style={{ color: "#42ba10", letterSpacing: "0.15em" }}
-        >
-          PROUD TO SERVE
-        </span>
-      </div>
+      <img
+        src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776744386/Screenshot_2026-04-21_at_9.36.12_AM_cpqbis.png"
+        alt="SM HOSPITAL"
+        className={`${titleClass} object-contain self-end`}
+        style={{ maxHeight: "60px" }}
+      />
     </div>
   );
 
@@ -761,7 +753,7 @@ const Navbar = () => {
 
             {/* Mobile brand header */}
             <div className="flex items-center gap-2 py-3 border-b border-slate-100 mb-3">
-              <Brand imgClass="h-9 sm:h-10" titleClass="text-lg sm:text-xl" tagClass="text-[7px] sm:text-[9px]" />
+              <Brand imgClass="h-9 sm:h-10" titleClass="text-lg sm:text-xl" />
             </div>
 
             {navLinks.map((l) => (
