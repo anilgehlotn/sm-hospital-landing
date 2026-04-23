@@ -192,14 +192,19 @@ const Footer = () => (
       <div>
         <p className="footer-col-title">Contact Us</p>
 
-        <div style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 10 }}>
+        <a
+          href="https://google.com/maps/dir//S+M+Hospital+-+Bangalore,+Ganesha,+747,+Shree+Hanuman+Temple+Rd,+ITI+layout,+Metro+Lay+Out,+Nayanda+Halli,+Bengaluru,+Karnataka+560026/@12.9289611,77.5046096,15z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3bae3fe01b97d65d:0x976eea2a6588f2cb!2m2!1d77.5239335!2d12.9447574?entry=ttu&g_ep=EgoyMDI2MDQyMC4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 10, textDecoration: "none" }}
+        >
           <svg style={{ flexShrink: 0, marginTop: 2 }} width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3bcc7a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
           </svg>
-          <span style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", lineHeight: 1.6 }}>
+          <span style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", lineHeight: 1.6, transition: "color 0.15s" }}>
             No. 747, ITI Layout, Nayandahalli, Bengaluru – 560039
           </span>
-        </div>
+        </a>
 
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
           <svg style={{ flexShrink: 0 }} width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3bcc7a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
