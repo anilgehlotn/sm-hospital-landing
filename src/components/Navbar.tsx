@@ -685,7 +685,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const Brand = ({ imgClass = "h-16 sm:h-20", titleClass = "text-2xl sm:text-4xl md:text-5xl" }) => (
-    <div className="inline-flex items-center gap-2 sm:gap-3 align-middle">
+    <div className="inline-flex items-center gap-2 sm:gap-3 align-middle" style={{ marginTop: "-10px" }}>
       <img
         src="https://res.cloudinary.com/dqp0pkern/image/upload/v1776370332/Screenshot_2026-04-17_at_12.25.47_AM-modified_w2ooek-removebg-preview_up2gad.png"
         alt="SM Hospital logo"

@@ -316,7 +316,8 @@ export default function SurgicalProcedures() {
         <div className="sp-header">
           <span className="sp-eyebrow">General Surgery</span>
           <h2 className="sp-h2">Surgical Procedures We Offer</h2>
-          <p className="sp-sub">Expert surgical care across all specialties, performed by experienced surgeons</p>
+          <p className="sp-sub">Expert surgical care across all specialties, performed by experienced surgeons. </p>
+          <p className="sp-sub">Experienced and Trusted Surgeons</p>
           <div className="sp-bar" />
         </div>
 

@@ -78,7 +78,7 @@ const HeroSection = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
         <div className="relative z-10 space-y-3 sm:space-y-4 md:space-y-6">
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-primary-foreground">
-            Expert & Trusted Healthcare, Right at Your Doorstep
+            Expert and Trusted Healthcare Partner
           </h1>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-primary-foreground/80 max-w-lg">
             Accessible, Affordable & Quality Care for Everyone
