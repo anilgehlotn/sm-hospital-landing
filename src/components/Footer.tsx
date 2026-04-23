@@ -193,7 +193,7 @@ const Footer = () => (
         <p className="footer-col-title">Contact Us</p>
 
         <a
-          href="https://google.com/maps/dir//S+M+Hospital+-+Bangalore,+Ganesha,+747,+Shree+Hanuman+Temple+Rd,+ITI+layout,+Metro+Lay+Out,+Nayanda+Halli,+Bengaluru,+Karnataka+560026/@12.9289611,77.5046096,15z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3bae3fe01b97d65d:0x976eea2a6588f2cb!2m2!1d77.5239335!2d12.9447574?entry=ttu&g_ep=EgoyMDI2MDQyMC4wIKXMDSoASAFQAw%3D%3D"
+          href="https://maps.google.com/?q=12.9447574,77.5239335"
           target="_blank"
           rel="noopener noreferrer"
           style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 10, textDecoration: "none" }}
